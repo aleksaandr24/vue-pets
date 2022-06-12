@@ -1,0 +1,15 @@
+@mixin flex-row-vh_center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-text {
+  font-family: 'Rubik-Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: $color-solid-light;
+}

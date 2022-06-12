@@ -1,0 +1,21 @@
+/*=============================== Common ===============================*/
+@import "@/assets/styles/common/fonts.scss",
+        "@/assets/styles/common/variables.scss",
+        "@/assets/styles/common/mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: calc(100vh - 60px);
+  width: 100%;
+  overflow-y: auto;
+  font-family: 'Rubik-Regular', Arial, Helvetica, sans-serif;
+}
+
+/*=============================== Components ===========================*/
+@import "@/App.scss",
+        "@/views/UIKit/UIKit.scss",
+        "@/components/ui/BaseButton/BaseButton.scss";

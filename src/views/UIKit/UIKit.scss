@@ -1,0 +1,16 @@
+.ui-kit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  &__regular-button {
+    width: 325px;
+    height: 48px;
+  }
+
+  &__small-button {
+    width: 150px;
+    height: 40px;
+  }
+}
