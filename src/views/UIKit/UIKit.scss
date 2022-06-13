@@ -28,6 +28,18 @@
     @include button-text;
   }
 
+  &__regular-label {
+    @include float-label-text;
+
+    &_danger {
+      color: $color-solid-danger;
+    }
+
+    &_success {
+      color: $color-solid-success;
+    }
+  }
+
   &__regular-input {
     width: 241px;
     height: 37px;

@@ -23,32 +23,57 @@
     >
       Маленькая
     </BaseButton>
-    <h3 class="ui-kit__section">BaseInput</h3>
-    <BaseInput
-      class="ui-kit__regular-input"
-      value="Some text..."
-    />
-    <BaseInput
-      class="ui-kit__regular-input ui-kit__regular-input_danger"
-      value="Some text..."
-    />
-    <BaseInput
-      class="ui-kit__regular-input ui-kit__regular-input_success"
-      value="Some text..."
-    />
+    <h3 class="ui-kit__section">BaseInput & FloatLabel</h3>
+    <FloatLabel
+      class="ui-kit__regular-label"
+    >
+      <BaseInput
+        v-model.trim="baseInput1"
+        class="ui-kit__regular-input"
+        placeholder="Введите текст"
+      />
+    </FloatLabel>
+    <FloatLabel
+      class="ui-kit__regular-label ui-kit__regular-label_success"
+    >
+      <BaseInput
+        v-model.trim="baseInput2"
+        class="ui-kit__regular-input ui-kit__regular-input_success"
+        placeholder="Введено корректно"
+      />
+    </FloatLabel>
+    <FloatLabel
+      class="ui-kit__regular-label ui-kit__regular-label_danger"
+    >
+      <BaseInput
+        v-model.trim="baseInput3"
+        class="ui-kit__regular-input ui-kit__regular-input_danger"
+        placeholder="Введено с ошибкой"
+      />
+    </FloatLabel>
   </div>
 </template>
 
 <script>
 import BaseButton from '@/components/ui/BaseButton/BaseButton.vue'
 import BaseInput from '@/components/ui/BaseInput/BaseInput.vue'
+import FloatLabel from '@/components/ui/FloatLabel/FloatLabel.vue'
 
 export default {
   name: 'UIKit',
 
   components: {
     BaseButton,
-    BaseInput
+    BaseInput,
+    FloatLabel
+  },
+
+  data() {
+    return {
+      baseInput1: '',
+      baseInput2: '',
+      baseInput3: ''
+    }
   }
 }
 </script>
