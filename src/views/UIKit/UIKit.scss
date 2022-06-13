@@ -4,13 +4,43 @@
   align-items: center;
   gap: 10px;
 
+  &__section {
+    margin-top: 20px;
+
+    &::before {
+      content: '<';
+    }
+
+    &::after {
+      content: '>';
+    }
+  }
+
   &__regular-button {
     width: 325px;
     height: 48px;
+    @include button-text;
   }
 
   &__small-button {
     width: 150px;
     height: 40px;
+    @include button-text;
+  }
+
+  &__regular-input {
+    width: 241px;
+    height: 37px;
+    @include input-text;
+
+    &_danger {
+      color: $color-solid-danger;
+      border-color: $color-solid-danger;
+    }
+
+    &_success {
+      color: $color-solid-success;
+      border-color: $color-solid-success;
+    }
   }
 }

@@ -15,7 +15,16 @@ body {
   font-family: 'Rubik-Regular', Arial, Helvetica, sans-serif;
 }
 
+body.light-theme {
+  background-color: $color-solid-light;
+}
+
+body.dark-theme {
+  background-color: $color-solid-bg-dark;
+}
+
 /*=============================== Components ===========================*/
 @import "@/App.scss",
         "@/views/UIKit/UIKit.scss",
-        "@/components/ui/BaseButton/BaseButton.scss";
+        "@/components/ui/BaseButton/BaseButton.scss",
+        "@/components/ui/BaseInput/BaseInput.scss";

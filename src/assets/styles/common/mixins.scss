@@ -13,3 +13,11 @@
   line-height: 21px;
   color: $color-solid-light;
 }
+
+@mixin input-text {
+  font-family: 'Rubik-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}

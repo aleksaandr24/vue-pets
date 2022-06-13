@@ -3,7 +3,6 @@
   border-radius: 10px;
   background: $color-solid-primary;
   @include flex-row-vh_center;
-  @include button-text;
 
   &:hover {
     cursor: pointer;

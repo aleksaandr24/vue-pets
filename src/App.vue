@@ -8,7 +8,11 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+
+  created() {
+    document.body.classList.add('light-theme')
+  }
 }
 </script>
 

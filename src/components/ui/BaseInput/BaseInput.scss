@@ -1,0 +1,10 @@
+.base-input {
+  padding-left: 8px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid;
+
+  &:focus {
+    outline: none;
+  }
+}
