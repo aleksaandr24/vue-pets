@@ -29,8 +29,8 @@
     >
       <BaseInput
         v-model.trim="baseInput1"
-        class="ui-kit__regular-input"
-        placeholder="Введите текст"
+        :elemClass="'ui-kit__regular-input'"
+        :placeholder="'Введите текст'"
       />
     </FloatLabel>
     <FloatLabel
@@ -38,8 +38,8 @@
     >
       <BaseInput
         v-model.trim="baseInput2"
-        class="ui-kit__regular-input ui-kit__regular-input_success"
-        placeholder="Введено корректно"
+        :elemClass="'ui-kit__regular-input ui-kit__regular-input_success'"
+        :placeholder="'Введено корректно'"
       />
     </FloatLabel>
     <FloatLabel
@@ -47,8 +47,9 @@
     >
       <BaseInput
         v-model.trim="baseInput3"
-        class="ui-kit__regular-input ui-kit__regular-input_danger"
-        placeholder="Введено с ошибкой"
+        :errorMessage="'Сообщение об ошибке'"
+        :placeholder="'Введено с ошибкой'"
+        :elemClass="'ui-kit__regular-input ui-kit__regular-input_danger'"
       />
     </FloatLabel>
   </div>

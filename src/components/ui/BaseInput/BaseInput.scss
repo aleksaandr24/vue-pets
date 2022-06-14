@@ -7,4 +7,10 @@
   &:focus {
     outline: none;
   }
+
+  &__message {
+    position: absolute;
+    right: 0;
+    @include input-message-text;
+  }
 }

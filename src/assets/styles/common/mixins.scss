@@ -29,3 +29,11 @@
   font-size: 14px;
   line-height: 150%;
 }
+
+@mixin input-message-text {
+  font-family: 'Rubik-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 150%;
+}
