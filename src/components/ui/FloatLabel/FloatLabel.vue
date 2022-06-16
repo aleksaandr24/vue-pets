@@ -41,7 +41,7 @@ export default {
     }
   },
 
-  data () {
+  data() {
     return {
       formEl: undefined,
       labelEl: undefined,
@@ -51,30 +51,30 @@ export default {
   },
 
   computed: {
-    inputId () {
+    inputId() {
       return this.for
     },
 
-    classObject () {
+    classObject() {
       return {
         'vfl-label-on-input': this.on && (this.isActive || this.fixed),
         'vfl-label-on-focus': this.isFocused
       }
     },
 
-    formElType () {
+    formElType() {
       return this.formEl ? this.formEl.tagName.toLowerCase() : ''
     },
 
-    floatLabel () {
-      if (this.label) return this.label
+    floatLabel() {
+      if (this.label !== '') return this.label
 
       switch (this.formElType) {
         case 'input':
         case 'textarea':
           return this.formEl.placeholder
         case 'select':
-          return this.formEl.querySelector('option[disabled][selected]').innerHTML
+          return this.formEl.querySelector('option[disabled]').innerHTML
         default:
           return ''
       }

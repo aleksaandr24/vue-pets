@@ -22,14 +22,17 @@ export default {
       type: String,
       default: ''
     },
+
     elemClass: {
       type: String,
       default: ''
     },
+
     placeholder: {
       type: String,
       default: ''
     },
+    
     errorMessage: {
       type: String,
       default: ''

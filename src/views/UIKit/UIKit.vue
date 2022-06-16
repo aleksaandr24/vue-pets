@@ -28,7 +28,7 @@
       class="ui-kit__regular-label"
     >
       <BaseInput
-        v-model.trim="baseInput1"
+        v-model="baseInput1"
         :elemClass="'ui-kit__regular-input'"
         :placeholder="'Введите текст'"
       />
@@ -37,7 +37,7 @@
       class="ui-kit__regular-label ui-kit__regular-label_success"
     >
       <BaseInput
-        v-model.trim="baseInput2"
+        v-model="baseInput2"
         :elemClass="'ui-kit__regular-input ui-kit__regular-input_success'"
         :placeholder="'Введено корректно'"
       />
@@ -46,10 +46,41 @@
       class="ui-kit__regular-label ui-kit__regular-label_danger"
     >
       <BaseInput
-        v-model.trim="baseInput3"
+        v-model="baseInput3"
         :errorMessage="'Сообщение об ошибке'"
         :placeholder="'Введено с ошибкой'"
         :elemClass="'ui-kit__regular-input ui-kit__regular-input_danger'"
+      />
+    </FloatLabel>
+    <h3 class="ui-kit__section">BaseSelect & FloatLabel fixed</h3>
+    <FloatLabel
+      class="ui-kit__regular-label"
+      :fixed="true"
+    >
+      <BaseSelect
+        v-model="baseSelect1"
+        :elemClass="'ui-kit__regular-select'"
+        :elemData="selectData"
+      />
+    </FloatLabel>
+    <FloatLabel
+      class="ui-kit__regular-label ui-kit__regular-label_success"
+      :fixed="true"
+    >
+      <BaseSelect
+        v-model="baseSelect2"
+        :elemClass="'ui-kit__regular-select'"
+        :elemData="selectData"
+      />
+    </FloatLabel>
+    <FloatLabel
+      class="ui-kit__regular-label ui-kit__regular-label_danger"
+      :fixed="true"
+    >
+      <BaseSelect
+        v-model="baseSelect3"
+        :elemClass="'ui-kit__regular-select'"
+        :elemData="selectData"
       />
     </FloatLabel>
   </div>
@@ -59,6 +90,7 @@
 import BaseButton from '@/components/ui/BaseButton/BaseButton.vue'
 import BaseInput from '@/components/ui/BaseInput/BaseInput.vue'
 import FloatLabel from '@/components/ui/FloatLabel/FloatLabel.vue'
+import BaseSelect from '@/components/ui/BaseSelect/BaseSelect.vue'
 
 export default {
   name: 'UIKit',
@@ -66,14 +98,23 @@ export default {
   components: {
     BaseButton,
     BaseInput,
-    FloatLabel
+    FloatLabel,
+    BaseSelect
   },
 
   data() {
     return {
       baseInput1: '',
       baseInput2: '',
-      baseInput3: ''
+      baseInput3: '',
+      baseSelect1: '',
+      baseSelect2: '',
+      baseSelect3: '',
+      selectData: [
+        'Пункт первый',
+        'Пункт второй',
+        'Пункт третий'
+      ]
     }
   }
 }
