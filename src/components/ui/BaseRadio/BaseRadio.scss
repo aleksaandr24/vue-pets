@@ -1,0 +1,34 @@
+.base-radio {
+  display: none;
+
+  &:checked + .base-radio-label:before {
+    background: url('@/assets/images/radio-checked.svg') no-repeat center center;
+  }
+}
+
+.base-radio-label {
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 0;
+  user-select: none;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    border: 2px solid $color-solid-light-dark;
+    border-radius: 100px;
+    background-color: #FFFFFF;
+  }
+
+  &:hover:before {
+    filter: brightness(150%);
+  }
+}

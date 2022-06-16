@@ -22,11 +22,15 @@
       height: 13px;
       background: #FFFFFF;
       border-radius: 90px;
-      transition: 0.1s steps(1);
+      transition: 0.1s ease-in-out;
     }
 
     &:active:after {
       width: 36px;
+    }
+
+    &:hover {
+      filter: brightness(150%);
     }
   }
 

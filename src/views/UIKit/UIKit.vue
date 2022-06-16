@@ -94,6 +94,17 @@
       :elemID="'switch3'"
       :on="false"
     />
+    <span>(disabled)</span>
+    <h3 class="ui-kit__section">BaseRadio</h3>
+    <BaseRadio
+      v-for="(element, index) in radioData"
+      v-model="baseRadio"
+      :key="index"
+      :elemName="'radio'"
+      :elemValue="element"
+      :elemLabel="element"
+      :elemChecked="index === 0 ? true : false"
+    />
   </div>
 </template>
 
@@ -103,6 +114,7 @@ import BaseInput from '@/components/ui/BaseInput/BaseInput.vue'
 import FloatLabel from '@/components/ui/FloatLabel/FloatLabel.vue'
 import BaseSelect from '@/components/ui/BaseSelect/BaseSelect.vue'
 import BaseSwitch from '@/components/ui/BaseSwitch/BaseSwitch.vue'
+import BaseRadio from '@/components/ui/BaseRadio/BaseRadio.vue'
 
 export default {
   name: 'UIKit',
@@ -112,7 +124,8 @@ export default {
     BaseInput,
     FloatLabel,
     BaseSelect,
-    BaseSwitch
+    BaseSwitch,
+    BaseRadio
   },
 
   data() {
@@ -124,6 +137,12 @@ export default {
       baseSelect2: '',
       baseSelect3: '',
       selectData: [
+        'Пункт первый',
+        'Пункт второй',
+        'Пункт третий'
+      ],
+      baseRadio: '',
+      radioData: [
         'Пункт первый',
         'Пункт второй',
         'Пункт третий'
