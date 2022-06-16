@@ -83,6 +83,17 @@
         :elemData="selectData"
       />
     </FloatLabel>
+    <h3 class="ui-kit__section">BaseSwitch</h3>
+    <BaseSwitch
+      :elemID="'switch1'"
+    />
+    <BaseSwitch
+      :elemID="'switch2'"
+    />
+    <BaseSwitch
+      :elemID="'switch3'"
+      :on="false"
+    />
   </div>
 </template>
 
@@ -91,6 +102,7 @@ import BaseButton from '@/components/ui/BaseButton/BaseButton.vue'
 import BaseInput from '@/components/ui/BaseInput/BaseInput.vue'
 import FloatLabel from '@/components/ui/FloatLabel/FloatLabel.vue'
 import BaseSelect from '@/components/ui/BaseSelect/BaseSelect.vue'
+import BaseSwitch from '@/components/ui/BaseSwitch/BaseSwitch.vue'
 
 export default {
   name: 'UIKit',
@@ -99,7 +111,8 @@ export default {
     BaseButton,
     BaseInput,
     FloatLabel,
-    BaseSelect
+    BaseSelect,
+    BaseSwitch
   },
 
   data() {

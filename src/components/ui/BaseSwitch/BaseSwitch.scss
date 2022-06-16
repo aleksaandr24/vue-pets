@@ -1,0 +1,41 @@
+.base-switch {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+
+  &__label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 36px;
+    height: 18px;
+    background: $color-solid-light-dark;
+    display: block;
+    border-radius: 97px;
+    position: relative;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      width: 13px;
+      height: 13px;
+      background: #FFFFFF;
+      border-radius: 90px;
+      transition: 0.1s steps(1);
+    }
+
+    &:active:after {
+      width: 36px;
+    }
+  }
+
+  &:checked + .base-switch__label {
+    background: $color-solid-primary;
+  }
+
+  &:checked + .base-switch__label::after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+  }
+}
