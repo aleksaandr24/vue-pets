@@ -84,27 +84,29 @@
       />
     </FloatLabel>
     <h3 class="ui-kit__section">BaseSwitch</h3>
-    <BaseSwitch
-      :elemID="'switch1'"
-    />
-    <BaseSwitch
-      :elemID="'switch2'"
-    />
-    <BaseSwitch
-      :elemID="'switch3'"
-      :on="false"
-    />
-    <span>(disabled)</span>
+    <div class="ui-kit__regular-switch">
+      <BaseSwitch
+        v-for="(value, index) in switchData"
+        v-model="baseSwitch[index]"
+        :key="index"
+        :elemID="value"
+        :elemChecked="index === 0 ? true : false"
+        :elemDisabled="index === 2 ? true : false"
+      />
+      <span>(disabled)</span>
+    </div>
     <h3 class="ui-kit__section">BaseRadio</h3>
-    <BaseRadio
-      v-for="(element, index) in radioData"
-      v-model="baseRadio"
-      :key="index"
-      :elemName="'radio'"
-      :elemValue="element"
-      :elemLabel="element"
-      :elemChecked="index === 0 ? true : false"
-    />
+    <div class="ui-kit__regular-radio">
+      <BaseRadio
+        v-for="(element, index) in radioData"
+        v-model="baseRadio"
+        :key="index"
+        :elemName="'radio'"
+        :elemValue="element"
+        :elemLabel="element"
+        :elemChecked="index === 0 ? true : false"
+      />
+    </div>
   </div>
 </template>
 
@@ -141,11 +143,21 @@ export default {
         'Пункт второй',
         'Пункт третий'
       ],
+      baseSwitch: {
+        0: '',
+        1: '',
+        2: ''
+      },
+      switchData: [
+        'switch1',
+        'switch2',
+        'switch3'
+      ],
       baseRadio: '',
       radioData: [
-        'Пункт первый',
-        'Пункт второй',
-        'Пункт третий'
+        'первый',
+        'второй',
+        'третий'
       ]
     }
   }

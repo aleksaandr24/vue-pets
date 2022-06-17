@@ -60,4 +60,20 @@
   &__regular-select {
     width: 241px;
   }
+
+  &__regular-switch {
+    width: 241px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include select-text;
+  }
+
+  &__regular-radio {
+    width: 241px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include select-text;
+  }
 }
