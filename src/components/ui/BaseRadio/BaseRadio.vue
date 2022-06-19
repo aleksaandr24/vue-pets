@@ -12,7 +12,7 @@
     class="base-radio-label"
     :for="elemValue"
   >
-    {{ elemLabel }}
+    <slot></slot>
   </label>
 </template>
 
@@ -21,6 +21,10 @@ export default {
   name: 'BaseRadio',
 
   props: {
+    modelValue: {
+      type: String
+    },
+    
     elemName: {
       type: String,
       default: 'radio'

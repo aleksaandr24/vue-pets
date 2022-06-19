@@ -1,0 +1,165 @@
+.base-avatar {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  &__circle {
+    border-radius: 50%;
+    @include flex-row-vh_center;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+
+    &_xs {
+      width: 24px;
+      height: 24px;
+    }
+
+    &_sm {
+      width: 32px;
+      height: 32px;
+    }
+
+    &_md {
+      width: 48px;
+      height: 48px;
+    }
+
+    &_lg {
+      width: 64px;
+      height: 64px;
+    }
+
+    &_xl {
+      width: 96px;
+      height: 96px;
+    }
+
+    &_xxl {
+      width: 128px;
+      height: 128px;
+    }
+    
+    &_purple {
+      background: $color-gradient-purple;
+    }
+
+    &_orange {
+      background: $color-gradient-orange;
+    }
+
+    &_yellow {
+      background: $color-gradient-yellow;
+    }
+
+    &_pink {
+      background: $color-gradient-pink;
+    }
+
+    &_green {
+      background: $color-gradient-green;
+    }
+  }
+
+  &__name {
+    @include avatar-text;
+    color: #FFFFFF;
+    text-transform: uppercase;
+
+    &_xs {
+      width: 14px;
+      height: 14px;
+      font-size: 10px;
+    }
+
+    &_sm {
+      width: 18px;
+      height: 18px;
+      font-size: 12px;
+    }
+
+    &_md {
+      width: 24px;
+      height: 24px;
+      font-size: 16px;
+    }
+
+    &_lg {
+      width: 32px;
+      height: 32px;
+      font-size: 20px;
+    }
+
+    &_xl {
+      width: 45px;
+      height: 45px;
+      font-size: 30px;
+    }
+
+    &_xxl {
+      width: 64px;
+      height: 64px;
+      font-size: 44px;
+    }
+  }
+
+  &__badge {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    background-color: #22C55E;
+    border-style: solid;
+    border-color: #FAFAF9;
+
+    &_xs {
+      width: 6px;
+      height: 6px;
+      border-width: 1px;
+      left: 53%;
+    }
+
+    &_sm {
+      width: 8px;
+      height: 8px;
+      border-width: 1px;
+      left: 54%;
+    }
+
+    &_md {
+      width: 12px;
+      height: 12px;
+      border-width: 2px;
+      left: 55%;
+    }
+
+    &_lg {
+      width: 16px;
+      height: 16px;
+      border-width: 2px;
+      left: 58%;
+    }
+
+    &_xl {
+      width: 24px;
+      height: 24px;
+      border-width: 4px;
+      left: 60%;
+    }
+
+    &_xxl {
+      width: 32px;
+      height: 32px;
+      border-width: 5px;
+      left: 65%;
+    }
+  }
+
+  &__picture {
+    max-width: none;
+    min-width: auto;
+    min-height: auto;
+    height: 100%;
+  }
+}

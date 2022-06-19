@@ -47,8 +47,8 @@
     >
       <BaseInput
         v-model="baseInput3"
-        :errorMessage="'Сообщение об ошибке'"
         :placeholder="'Введено с ошибкой'"
+        :errorMessage="'Сообщение об ошибке'"
         :elemClass="'ui-kit__regular-input ui-kit__regular-input_danger'"
       />
     </FloatLabel>
@@ -84,7 +84,7 @@
       />
     </FloatLabel>
     <h3 class="ui-kit__section">BaseSwitch</h3>
-    <div class="ui-kit__regular-switch">
+    <div class="ui-kit__switch">
       <BaseSwitch
         v-for="(value, index) in switchData"
         v-model="baseSwitch[index]"
@@ -92,19 +92,93 @@
         :elemID="value"
         :elemChecked="index === 0 ? true : false"
         :elemDisabled="index === 2 ? true : false"
-      />
-      <span>(disabled)</span>
+      >
+        {{ value }}
+      </BaseSwitch>
     </div>
     <h3 class="ui-kit__section">BaseRadio</h3>
-    <div class="ui-kit__regular-radio">
+    <div class="ui-kit__radio">
       <BaseRadio
         v-for="(element, index) in radioData"
         v-model="baseRadio"
         :key="index"
         :elemName="'radio'"
         :elemValue="element"
-        :elemLabel="element"
         :elemChecked="index === 0 ? true : false"
+      >
+        {{ element }}
+      </BaseRadio>
+    </div>
+    <h3 class="ui-kit__section">BaseAvatar</h3>
+    <div class="ui-kit__avatar">
+      <BaseAvatar
+      :size="'xs'"
+      :name="'James Parker'"
+      :elemClass="'ui-kit__avatar-item'"
+      />
+      <BaseAvatar
+      :size="'xs'"
+      :name="'Christopher Stewart'"
+      :online="true"
+      :elemClass="'ui-kit__avatar-item'"
+      />
+      <BaseAvatar
+      :size="'sm'"
+      :name="'David Fisher'"
+      :elemClass="'ui-kit__avatar-item'"
+      />
+      <BaseAvatar
+      :size="'sm'"
+      :name="'Roger Clark'"
+      :picture="'https://loremflickr.com/128/128'"
+      :online="true"
+      :elemClass="'ui-kit__avatar-item'"
+      />
+      <BaseAvatar
+      :size="'md'"
+      :name="'Tony Alexander'"
+      :picture="'https://loremflickr.com/128/128'"
+      :elemClass="'ui-kit__avatar-item'"
+      />
+      <BaseAvatar
+      :size="'md'"
+      :name="'Richard Aguilar'"
+      :online="true"
+      :elemClass="'ui-kit__avatar-item'"
+      />
+      <BaseAvatar
+      :size="'lg'"
+      :name="'Nicholas Russell'"
+      :elemClass="'ui-kit__avatar-item'"
+      />
+      <BaseAvatar
+      :size="'lg'"
+      :name="'Sean Lee'"
+      :online="true"
+      :elemClass="'ui-kit__avatar-item'"
+      />
+      <BaseAvatar
+      :size="'xl'"
+      :name="'Alvin Ward'"
+      :elemClass="'ui-kit__avatar-item'"
+      />
+      <BaseAvatar
+      :size="'xl'"
+      :name="'Carlos Bishop'"
+      :picture="'https://loremflickr.com/128/128'"
+      :online="true"
+      :elemClass="'ui-kit__avatar-item'"
+      />
+      <BaseAvatar
+      :size="'xxl'"
+      :name="'Phil'"
+      :picture="'https://loremflickr.com/128/128'"
+      :elemClass="'ui-kit__avatar-item'"
+      />
+      <BaseAvatar
+      :size="'xxl'"
+      :online="true"
+      :elemClass="'ui-kit__avatar-item'"
       />
     </div>
   </div>
@@ -117,6 +191,7 @@ import FloatLabel from '@/components/ui/FloatLabel/FloatLabel.vue'
 import BaseSelect from '@/components/ui/BaseSelect/BaseSelect.vue'
 import BaseSwitch from '@/components/ui/BaseSwitch/BaseSwitch.vue'
 import BaseRadio from '@/components/ui/BaseRadio/BaseRadio.vue'
+import BaseAvatar from '@/components/ui/BaseAvatar/BaseAvatar.vue'
 
 export default {
   name: 'UIKit',
@@ -127,7 +202,8 @@ export default {
     FloatLabel,
     BaseSelect,
     BaseSwitch,
-    BaseRadio
+    BaseRadio,
+    BaseAvatar
   },
 
   data() {

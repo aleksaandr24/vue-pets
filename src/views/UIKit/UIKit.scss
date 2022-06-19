@@ -61,7 +61,15 @@
     width: 241px;
   }
 
-  &__regular-switch {
+  &__switch {
+    width: 241px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include select-text;
+  }
+
+  &__radio {
     width: 241px;
     display: flex;
     flex-direction: row;
@@ -69,11 +77,15 @@
     @include select-text;
   }
 
-  &__regular-radio {
-    width: 241px;
+  &__avatar {
+    width: 320px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    @include select-text;
+    flex-wrap: wrap;
+  }
+
+  &__avatar-item {
+    flex-basis: 50%;
+    margin: 5px 0;
   }
 }

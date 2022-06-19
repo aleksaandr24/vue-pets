@@ -19,8 +19,7 @@ export default {
 
   props: {
     modelValue: {
-      type: String,
-      default: ''
+      type: String
     },
 
     elemClass: {
