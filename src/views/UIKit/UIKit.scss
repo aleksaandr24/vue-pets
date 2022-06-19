@@ -17,6 +17,18 @@
     }
   }
 
+  &__logo {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &_dark {
+      background-color: $color-solid-bg-dark;
+    }
+  }
+
   &__regular-button {
     width: 325px;
     height: 48px;

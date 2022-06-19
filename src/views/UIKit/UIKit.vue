@@ -1,5 +1,28 @@
 <template>
   <div class="ui-kit">
+    <h3 class="ui-kit__section">BaseLogo</h3>
+    <div class="ui-kit__logo">
+      <BaseLogo/>
+      <BaseLogo
+      :size="'md'"
+      />
+      <BaseLogo
+      :size="'lg'"
+      />
+    </div>
+    <div class="ui-kit__logo ui-kit__logo_dark">
+      <BaseLogo
+      dark
+      />
+      <BaseLogo
+      :size="'md'"
+      dark
+      />
+      <BaseLogo
+      :size="'lg'"
+      dark
+      />
+    </div>
     <h3 class="ui-kit__section">BaseButton</h3>
     <BaseButton
       class="ui-kit__regular-button"
@@ -267,6 +290,7 @@
 </template>
 
 <script>
+import BaseLogo from '@/components/ui/BaseLogo/BaseLogo.vue'
 import BaseButton from '@/components/ui/BaseButton/BaseButton.vue'
 import BaseInput from '@/components/ui/BaseInput/BaseInput.vue'
 import FloatLabel from '@/components/ui/FloatLabel/FloatLabel.vue'
@@ -280,6 +304,7 @@ export default {
   name: 'UIKit',
 
   components: {
+    BaseLogo,
     BaseButton,
     BaseInput,
     FloatLabel,

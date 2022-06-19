@@ -1,0 +1,39 @@
+.base-logo {
+  width: 25px;
+  height: 24px;
+  background-image: url('@/assets/images/logo_sm_black.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &_md {
+    width: 105px;
+    height: 95px;
+    background-image: url('@/assets/images/logo_md_black.svg');
+  }
+
+  &_lg {
+    width: 185px;
+    height: 166px;
+    background-image: url('@/assets/images/logo_lg_black.svg');
+  }
+}
+
+.base-logo-dark {
+  width: 25px;
+  height: 24px;
+  background-image: url('@/assets/images/logo_sm.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &_md {
+    width: 105px;
+    height: 95px;
+    background-image: url('@/assets/images/logo_md.svg');
+  }
+
+  &_lg {
+    width: 185px;
+    height: 166px;
+    background-image: url('@/assets/images/logo_lg.svg');
+  }
+}
