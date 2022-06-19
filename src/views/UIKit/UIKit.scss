@@ -88,4 +88,15 @@
     flex-basis: 50%;
     margin: 5px 0;
   }
+
+  &__carousel-control {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    &_dark {
+      background-color: $color-solid-bg-dark;
+    }
+  }
 }

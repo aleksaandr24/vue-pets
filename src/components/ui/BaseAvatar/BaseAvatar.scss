@@ -11,6 +11,10 @@
     z-index: 1;
     overflow: hidden;
 
+    &:hover {
+      filter: brightness(120%);
+    }
+
     &_xs {
       width: 24px;
       height: 24px;

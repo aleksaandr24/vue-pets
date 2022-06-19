@@ -119,7 +119,7 @@
       <BaseAvatar
       :size="'xs'"
       :name="'Christopher Stewart'"
-      :online="true"
+      online
       :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
@@ -131,7 +131,7 @@
       :size="'sm'"
       :name="'Roger Clark'"
       :picture="'https://loremflickr.com/128/128'"
-      :online="true"
+      online
       :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
@@ -143,7 +143,7 @@
       <BaseAvatar
       :size="'md'"
       :name="'Richard Aguilar'"
-      :online="true"
+      online
       :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
@@ -154,7 +154,7 @@
       <BaseAvatar
       :size="'lg'"
       :name="'Sean Lee'"
-      :online="true"
+      online
       :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
@@ -166,7 +166,7 @@
       :size="'xl'"
       :name="'Carlos Bishop'"
       :picture="'https://loremflickr.com/128/128'"
-      :online="true"
+      online
       :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
@@ -177,8 +177,25 @@
       />
       <BaseAvatar
       :size="'xxl'"
-      :online="true"
+      online
       :elemClass="'ui-kit__avatar-item'"
+      />
+    </div>
+    <h3 class="ui-kit__section">CarouselControl</h3>
+    <div class="ui-kit__carousel-control">
+      <CarouselControl
+        prev
+      />
+      <CarouselControl
+      />
+    </div>
+    <div class="ui-kit__carousel-control ui-kit__carousel-control_dark">
+      <CarouselControl
+        prev
+        dark
+      />
+      <CarouselControl
+        dark
       />
     </div>
   </div>
@@ -192,6 +209,7 @@ import BaseSelect from '@/components/ui/BaseSelect/BaseSelect.vue'
 import BaseSwitch from '@/components/ui/BaseSwitch/BaseSwitch.vue'
 import BaseRadio from '@/components/ui/BaseRadio/BaseRadio.vue'
 import BaseAvatar from '@/components/ui/BaseAvatar/BaseAvatar.vue'
+import CarouselControl from '@/components/ui/CarouselControl/CarouselControl.vue'
 
 export default {
   name: 'UIKit',
@@ -203,7 +221,8 @@ export default {
     BaseSelect,
     BaseSwitch,
     BaseRadio,
-    BaseAvatar
+    BaseAvatar,
+    CarouselControl
   },
 
   data() {
