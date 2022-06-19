@@ -1,7 +1,6 @@
 <template>
   <select
-    class="base-select"
-    :class="elemClass"
+    :class="className"
     :value="modelValue"
     @change="$emit('update:modelValue', $event.target.value)"
   >
@@ -31,6 +30,11 @@ export default {
       type: String
     },
 
+    dark: {
+      type: Boolean,
+      default: false
+    },
+
     elemClass: {
       type: String,
       default: ''
@@ -49,6 +53,17 @@ export default {
 
   emits: [
     'update:modelValue'
-  ]
+  ],
+
+  computed: {
+    className() {
+      let classArray = ['base-select']
+      if (this.dark) {
+        classArray.push('base-select_dark')
+      }
+      classArray.push(this.elemClass)
+      return classArray.join(' ')
+    }
+  }
 }
 </script>

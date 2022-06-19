@@ -52,6 +52,36 @@
         :elemClass="'ui-kit__regular-input ui-kit__regular-input_danger'"
       />
     </FloatLabel>
+    <div class="ui-kit__input-dark">
+      <FloatLabel
+        class="ui-kit__regular-label ui-kit__regular-label_dark"
+      >
+        <BaseInput
+          v-model="baseInput4"
+          :elemClass="'ui-kit__regular-input ui-kit__regular-input_dark'"
+          :placeholder="'Введите текст'"
+        />
+      </FloatLabel>
+      <FloatLabel
+        class="ui-kit__regular-label ui-kit__regular-label_success"
+      >
+        <BaseInput
+          v-model="baseInput5"
+          :elemClass="'ui-kit__regular-input ui-kit__regular-input_success'"
+          :placeholder="'Введено корректно'"
+        />
+      </FloatLabel>
+      <FloatLabel
+        class="ui-kit__regular-label ui-kit__regular-label_danger"
+      >
+        <BaseInput
+          v-model="baseInput6"
+          :placeholder="'Введено с ошибкой'"
+          :errorMessage="'Сообщение об ошибке'"
+          :elemClass="'ui-kit__regular-input ui-kit__regular-input_danger'"
+        />
+      </FloatLabel>
+    </div>
     <h3 class="ui-kit__section">BaseSelect & FloatLabel fixed</h3>
     <FloatLabel
       class="ui-kit__regular-label"
@@ -83,6 +113,41 @@
         :elemData="selectData"
       />
     </FloatLabel>
+    <div class="ui-kit__select-dark">
+      <FloatLabel
+        class="ui-kit__regular-label ui-kit__regular-label_dark"
+        :fixed="true"
+      >
+        <BaseSelect
+          v-model="baseSelect4"
+          :elemClass="'ui-kit__regular-select '"
+          :elemData="selectData"
+          dark
+        />
+      </FloatLabel>
+      <FloatLabel
+        class="ui-kit__regular-label ui-kit__regular-label_success"
+        :fixed="true"
+      >
+        <BaseSelect
+          v-model="baseSelect5"
+          :elemClass="'ui-kit__regular-select'"
+          :elemData="selectData"
+          dark
+        />
+      </FloatLabel>
+      <FloatLabel
+        class="ui-kit__regular-label ui-kit__regular-label_danger"
+        :fixed="true"
+      >
+        <BaseSelect
+          v-model="baseSelect6"
+          :elemClass="'ui-kit__regular-select'"
+          :elemData="selectData"
+          dark
+        />
+      </FloatLabel>
+    </div>
     <h3 class="ui-kit__section">BaseSwitch</h3>
     <div class="ui-kit__switch">
       <BaseSwitch
@@ -230,9 +295,15 @@ export default {
       baseInput1: '',
       baseInput2: '',
       baseInput3: '',
+      baseInput4: '',
+      baseInput5: '',
+      baseInput6: '',
       baseSelect1: '',
       baseSelect2: '',
       baseSelect3: '',
+      baseSelect4: '',
+      baseSelect5: '',
+      baseSelect6: '',
       selectData: [
         'Пункт первый',
         'Пункт второй',

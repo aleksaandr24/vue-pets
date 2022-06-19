@@ -39,6 +39,10 @@
     &_success {
       color: $color-solid-success;
     }
+
+    &_dark {
+      color: $color-solid-light;
+    }
   }
 
   &__regular-input {
@@ -55,6 +59,18 @@
       color: $color-solid-success;
       border-color: $color-solid-success;
     }
+
+    &_dark {
+      color: $color-solid-light;
+    }
+  }
+
+  &__input-dark, &__select-dark {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: $color-solid-bg-dark;
   }
 
   &__regular-select {
