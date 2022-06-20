@@ -52,3 +52,11 @@
   font-weight: 700;
   line-height: 150%;
 }
+
+@mixin card-text {
+  font-family: 'Rubik-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}

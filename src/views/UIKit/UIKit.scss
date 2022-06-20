@@ -127,4 +127,17 @@
       background-color: $color-solid-bg-dark;
     }
   }
+
+  &__card {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    @include flex-row-vh_center;
+    @include card-text;
+    color: $color-solid-darklight;
+
+    &_dark {
+      color: #FFFFFF;
+    }
+  }
 }

@@ -286,6 +286,18 @@
         dark
       />
     </div>
+    <h3 class="ui-kit__section">BaseCard</h3>
+    <BaseCard
+      :elemClass="'ui-kit__card'"
+    >
+      BaseCard light theme
+    </BaseCard>
+    <BaseCard
+      :elemClass="'ui-kit__card ui-kit__card_dark'"
+      dark
+    >
+      BaseCard dark theme
+    </BaseCard>
   </div>
 </template>
 
@@ -299,6 +311,7 @@ import BaseSwitch from '@/components/ui/BaseSwitch/BaseSwitch.vue'
 import BaseRadio from '@/components/ui/BaseRadio/BaseRadio.vue'
 import BaseAvatar from '@/components/ui/BaseAvatar/BaseAvatar.vue'
 import CarouselControl from '@/components/ui/CarouselControl/CarouselControl.vue'
+import BaseCard from '@/components/ui/BaseCard/BaseCard.vue'
 
 export default {
   name: 'UIKit',
@@ -312,7 +325,8 @@ export default {
     BaseSwitch,
     BaseRadio,
     BaseAvatar,
-    CarouselControl
+    CarouselControl,
+    BaseCard
   },
 
   data() {
