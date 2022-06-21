@@ -1,17 +1,17 @@
 .base-button {
   border: none;
   border-radius: 10px;
-  background: $color-solid-primary;
+  background: var(--color-solid-primary);
   @include flex-row-vh_center;
 
   &:hover {
     cursor: pointer;
-    background-color: $color-solid-primary_hover;
+    background-color: var(--color-solid-primary_hover);
   }
 
   &:disabled {
     pointer-events: none;
-    background-color: $color-solid-primary_disabled;
+    background-color: var(--color-solid-primary_disabled);
   }
 }
 
@@ -27,7 +27,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: $color-solid-light;
+    background: var(--color-solid-light);
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
 
     &:nth-child(1) {

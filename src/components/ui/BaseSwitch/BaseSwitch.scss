@@ -9,7 +9,7 @@
     visibility: hidden;
 
     &:checked + .base-switch__label {
-      background: $color-solid-primary;
+      background: var(--color-solid-primary);
     }
   
     &:checked + .base-switch__label::after {
@@ -24,7 +24,7 @@
     text-indent: -9999px;
     width: 36px;
     height: 18px;
-    background: $color-solid-light-dark;
+    background: var(--color-solid-light-dark);
     display: block;
     border-radius: 97px;
     position: relative;

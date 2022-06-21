@@ -3,7 +3,7 @@
   height: 46px;
   border: none;
   border-radius: 100px;
-  background-color: $color-solid-primary;
+  background-color: var(--color-solid-primary);
   background-image: url('@/assets/images/carousel-next.svg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -14,7 +14,7 @@
   }
 
   &_dark {
-    background-color: $color-solid-light-dark;
+    background-color: var(--color-solid-light-dark);
   }
   
   &_prev {

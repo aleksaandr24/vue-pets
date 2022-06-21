@@ -46,23 +46,23 @@
     }
     
     &_purple {
-      background: $color-gradient-purple;
+      background: var(--color-gradient-purple);
     }
 
     &_orange {
-      background: $color-gradient-orange;
+      background: var(--color-gradient-orange);
     }
 
     &_yellow {
-      background: $color-gradient-yellow;
+      background: var(--color-gradient-yellow);
     }
 
     &_pink {
-      background: $color-gradient-pink;
+      background: var(--color-gradient-pink);
     }
 
     &_green {
-      background: $color-gradient-green;
+      background: var(--color-gradient-green);
     }
   }
 
