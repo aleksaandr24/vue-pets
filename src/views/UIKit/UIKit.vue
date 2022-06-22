@@ -286,17 +286,35 @@
         dark
       />
     </div>
-    <h3 class="ui-kit__section">BaseCard</h3>
+    <h3 class="ui-kit__section">BaseCard & Badges</h3>
     <BaseCard
       :elemClass="'ui-kit__card'"
     >
-      BaseCard light theme
+      <h5>BaseCard light theme</h5>
+      <div class="ui-kit__badges">
+        <BadgeLabel
+          :elemClass="'ui-kit__label'"
+        >
+          Label
+        </BadgeLabel>
+        <BadgeCounter/>
+        <BadgeLike/>
+      </div>
     </BaseCard>
     <BaseCard
       :elemClass="'ui-kit__card ui-kit__card_dark'"
       dark
     >
-      BaseCard dark theme
+      <h5>BaseCard dark theme</h5>
+      <div class="ui-kit__badges">
+        <BadgeLabel
+          :elemClass="'ui-kit__label ui-kit__label_yellow'"
+        >
+          Label
+        </BadgeLabel>
+        <BadgeCounter/>
+        <BadgeLike/>
+      </div>
     </BaseCard>
   </div>
 </template>
@@ -312,6 +330,9 @@ import BaseRadio from '@/components/ui/BaseRadio/BaseRadio.vue'
 import BaseAvatar from '@/components/ui/BaseAvatar/BaseAvatar.vue'
 import CarouselControl from '@/components/ui/CarouselControl/CarouselControl.vue'
 import BaseCard from '@/components/ui/BaseCard/BaseCard.vue'
+import BadgeLike from '@/components/ui/BadgeLike/BadgeLike.vue'
+import BadgeCounter from '@/components/ui/BadgeCounter/BadgeCounter.vue'
+import BadgeLabel from '@/components/ui/BadgeLabel/BadgeLabel.vue'
 
 export default {
   name: 'UIKit',
@@ -326,7 +347,10 @@ export default {
     BaseRadio,
     BaseAvatar,
     CarouselControl,
-    BaseCard
+    BaseCard,
+    BadgeLike,
+    BadgeCounter,
+    BadgeLabel
   },
 
   data() {

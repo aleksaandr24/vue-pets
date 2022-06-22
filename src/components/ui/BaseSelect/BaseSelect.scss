@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
   background-position: 95%;
   cursor: pointer;
-  @include select-text;
+  @include text-style('RR', 14px, 21px);
   color: inherit;
 
   &:focus {
@@ -39,7 +39,7 @@
   }
 
   &__option {
-    @include select-text;
+    @include text-style('RR', 14px, 21px);
     color: var(--color-solid-light-dark);
   }
 }

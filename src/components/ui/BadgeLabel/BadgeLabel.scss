@@ -1,0 +1,7 @@
+.badge-label {
+  width: 80px;
+  height: 22px;
+  border-radius: 15px;
+  @include flex-direct-vh(row, center, center);
+  @include text-style('RR', 15px, 18px);
+}

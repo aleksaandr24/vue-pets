@@ -1,62 +1,22 @@
-@mixin flex-row-vh_center {
+@mixin flex-direct-vh($direction, $justify: normal, $align: normal) {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
-@mixin button-text {
-  font-family: 'Rubik-Medium';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: var(--color-solid-light);
-}
-
-@mixin float-label-text {
-  font-family: 'Rubik-Regular';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 150%;
-}
-
-@mixin input-text {
-  font-family: 'Rubik-Regular';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
-}
-
-@mixin input-message-text {
-  font-family: 'Rubik-Regular';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 150%;
-}
-
-@mixin select-text {
-  font-family: 'Rubik-Regular';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-}
-
-@mixin avatar-text {
-  font-family: 'Rubik-Bold';
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%;
-}
-
-@mixin card-text {
-  font-family: 'Rubik-Regular';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+@mixin text-style($family: 'RR', $size: 10px, $height: 150%, $style: normal) {
+  @if $family == 'RR' {
+    font-family: 'Rubik-Regular';
+    font-weight: 400;
+  } @else if $family == 'RM' {
+    font-family: 'Rubik-Medium';
+    font-weight: 500;
+  } @else if $family == 'RB' {
+    font-family: 'Rubik-Bold';
+    font-weight: 700;
+  }
+  font-style: $style;
+  font-size: $size;
+  line-height: $height;
 }

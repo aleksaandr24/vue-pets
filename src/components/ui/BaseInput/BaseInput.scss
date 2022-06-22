@@ -11,6 +11,6 @@
   &__message {
     position: absolute;
     right: 0;
-    @include input-message-text;
+    @include text-style('RR', 8px);
   }
 }

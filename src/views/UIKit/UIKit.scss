@@ -1,9 +1,7 @@
 .ui-kit {
   min-height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  @include flex-direct-vh(column, center, center);
+  gap: 15px;
 
   &__section {
     margin: 20px 0;
@@ -19,10 +17,7 @@
 
   &__logo {
     width: 350px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-direct-vh(row, space-between, center);
 
     &_dark {
       background-color: var(--color-solid-bg-dark);
@@ -32,17 +27,19 @@
   &__regular-button {
     width: 325px;
     height: 48px;
-    @include button-text;
+    @include text-style('RM', 18px, 21px);
+    color: var(--color-solid-light);
   }
 
   &__small-button {
     width: 150px;
     height: 40px;
-    @include button-text;
+    @include text-style('RM', 18px, 21px);
+    color: var(--color-solid-light);
   }
 
   &__regular-label {
-    @include float-label-text;
+    @include text-style('RR');
 
     &_danger {
       color: var(--color-solid-danger);
@@ -60,7 +57,7 @@
   &__regular-input {
     width: 241px;
     height: 37px;
-    @include input-text;
+    @include text-style('RR', 14px);
 
     &_danger {
       color: var(--color-solid-danger);
@@ -79,8 +76,7 @@
 
   &__input-dark, &__select-dark {
     padding: 10px 0;
-    display: flex;
-    flex-direction: column;
+    @include flex-direct-vh(column);
     gap: 10px;
     background-color: var(--color-solid-bg-dark);
   }
@@ -91,24 +87,20 @@
 
   &__switch {
     width: 241px;
-    display: flex;
-    flex-direction: column;
+    @include flex-direct-vh(column);
     gap: 10px;
-    @include select-text;
+    @include text-style('RR', 14px, 21px);
   }
 
   &__radio {
     width: 241px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    @include select-text;
+    @include flex-direct-vh(row, space-between);
+    @include text-style('RR', 14px, 21px);
   }
 
   &__avatar {
     width: 320px;
-    display: flex;
-    flex-direction: row;
+    @include flex-direct-vh(row);
     flex-wrap: wrap;
   }
 
@@ -119,9 +111,7 @@
 
   &__carousel-control {
     width: 250px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    @include flex-direct-vh(row, space-evenly);
 
     &_dark {
       background-color: var(--color-solid-bg-dark);
@@ -132,12 +122,26 @@
     width: 300px;
     height: 200px;
     padding: 10px;
-    @include flex-row-vh_center;
-    @include card-text;
+    @include flex-direct-vh(column, space-between, center);
+    @include text-style('RR', 14px, 22px);
     color: var(--color-solid-darklight);
 
     &_dark {
       color: #FFFFFF;
+    }
+  }
+
+  &__badges {
+    width: 100%;
+    @include flex-direct-vh(row, space-between, center);
+  }
+
+  &__label {
+    background-color: var(--color-solid-primary);
+    color: var(--color-solid-light);
+
+    &_yellow {
+      background-color: #FCC064;
     }
   }
 }

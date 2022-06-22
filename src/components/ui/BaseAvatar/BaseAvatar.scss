@@ -1,12 +1,10 @@
 .base-avatar {
-  display: flex;
   position: relative;
-  justify-content: center;
-  align-items: center;
+  @include flex-direct-vh(row, center, center);
 
   &__circle {
     border-radius: 50%;
-    @include flex-row-vh_center;
+    @include flex-direct-vh(row, center, center);
     cursor: pointer;
     z-index: 1;
     overflow: hidden;
@@ -67,7 +65,7 @@
   }
 
   &__name {
-    @include avatar-text;
+    @include text-style('RB');
     color: #FFFFFF;
     text-transform: uppercase;
 
