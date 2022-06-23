@@ -297,8 +297,12 @@
         >
           Label
         </BadgeLabel>
-        <BadgeCounter/>
-        <BadgeLike/>
+        <div class="ui-kit__likes">
+          <BadgeCounter
+            :likes="10"
+          />
+          <BadgeLike/>
+        </div>
       </div>
     </BaseCard>
     <BaseCard
@@ -312,8 +316,12 @@
         >
           Label
         </BadgeLabel>
-        <BadgeCounter/>
-        <BadgeLike/>
+        <div class="ui-kit__likes">
+          <BadgeCounter
+            :likes="2"
+          />
+          <BadgeLike/>
+        </div>
       </div>
     </BaseCard>
   </div>
