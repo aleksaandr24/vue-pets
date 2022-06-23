@@ -6,11 +6,11 @@
   &__section {
     margin: 20px 0;
 
-    &::before {
+    &:before {
       content: '<';
     }
 
-    &::after {
+    &:after {
       content: '>';
     }
   }

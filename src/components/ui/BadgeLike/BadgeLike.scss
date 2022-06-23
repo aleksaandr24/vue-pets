@@ -1,0 +1,16 @@
+.badge-like {
+  width: 22px;
+  height: 22px;
+  background-image: url('@/assets/images/like-icon-frame.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(150%);
+  }
+
+  &_liked {
+    background-image: url('@/assets/images/like-icon-full.svg');
+  }
+}
