@@ -299,9 +299,11 @@
         </BadgeLabel>
         <div class="ui-kit__likes">
           <BadgeCounter
-            :likes="10"
+            :likes="cardLikes1"
           />
-          <BadgeLike/>
+          <BadgeLike
+            @eventLike="increaseLikes(1)"
+          />
         </div>
       </div>
     </BaseCard>
@@ -318,9 +320,11 @@
         </BadgeLabel>
         <div class="ui-kit__likes">
           <BadgeCounter
-            :likes="2"
+            :likes="cardLikes2"
           />
-          <BadgeLike/>
+          <BadgeLike
+            @eventLike="increaseLikes(2)"
+          />
         </div>
       </div>
     </BaseCard>
@@ -395,7 +399,19 @@ export default {
         'первый',
         'второй',
         'третий'
-      ]
+      ],
+      cardLikes1: 21,
+      cardLikes2: 326
+    }
+  },
+
+  methods: {
+    increaseLikes(id) {
+      if (id === 1) {
+        this.cardLikes1++
+      } else if (id === 2) {
+        this.cardLikes2++
+      }
     }
   }
 }

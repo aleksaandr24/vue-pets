@@ -1,7 +1,7 @@
 <template>
   <div
     :class="className"
-    @click="addRemoveLike"
+    @click="makeLike"
   >
   </div>
 </template>
@@ -9,6 +9,17 @@
 <script>
 export default {
   name: 'BadgeLike',
+
+  props: {
+    elemClass: {
+      type: String,
+      default: ''
+    }
+  },
+
+  emits: [
+    'eventLike'
+  ],
 
   data() {
     return {
@@ -18,7 +29,8 @@ export default {
 
   computed: {
     className() {
-      let classArray = ['badge-like']
+      const classArray = ['badge-like']
+      classArray.push(this.elemClass)
       if (this.isLiked) {
         classArray.push('badge-like_liked')
       }
@@ -27,11 +39,10 @@ export default {
   },
 
   methods: {
-    addRemoveLike() {
+    makeLike() {
       if (!this.isLiked) {
         this.isLiked = true
-      } else {
-        this.isLiked = false
+        this.$emit('eventLike')
       }
     }
   }

@@ -1,9 +1,11 @@
 .badge-like {
   width: 22px;
   height: 22px;
+  margin: 0 10px;
   background-image: url('@/assets/images/like-icon-frame.svg');
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: 90%;
   cursor: pointer;
 
   &:hover {
