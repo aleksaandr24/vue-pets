@@ -1,26 +1,29 @@
 <template>
+  <BaseLoader
+    v-show="loading"
+  />
   <div class="ui-kit">
     <h3 class="ui-kit__section">BaseLogo</h3>
     <div class="ui-kit__logo">
       <BaseLogo/>
       <BaseLogo
-      :size="'md'"
+        :size="'md'"
       />
       <BaseLogo
-      :size="'lg'"
+        :size="'lg'"
       />
     </div>
     <div class="ui-kit__logo ui-kit__logo_dark">
       <BaseLogo
-      dark
+        dark
       />
       <BaseLogo
-      :size="'md'"
-      dark
+        :size="'md'"
+        dark
       />
       <BaseLogo
-      :size="'lg'"
-      dark
+        :size="'lg'"
+        dark
       />
     </div>
     <h3 class="ui-kit__section">BaseButton</h3>
@@ -200,73 +203,73 @@
     <h3 class="ui-kit__section">BaseAvatar</h3>
     <div class="ui-kit__avatar">
       <BaseAvatar
-      :size="'xs'"
-      :name="'James Parker'"
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'xs'"
+        :name="'James Parker'"
+        :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
-      :size="'xs'"
-      :name="'Christopher Stewart'"
-      online
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'xs'"
+        :name="'Christopher Stewart'"
+        online
+        :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
-      :size="'sm'"
-      :name="'David Fisher'"
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'sm'"
+        :name="'David Fisher'"
+        :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
-      :size="'sm'"
-      :name="'Roger Clark'"
-      :picture="'https://loremflickr.com/128/128'"
-      online
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'sm'"
+        :name="'Roger Clark'"
+        :picture="'https://loremflickr.com/128/128'"
+        online
+        :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
-      :size="'md'"
-      :name="'Tony Alexander'"
-      :picture="'https://loremflickr.com/128/128'"
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'md'"
+        :name="'Tony Alexander'"
+        :picture="'https://loremflickr.com/128/128'"
+        :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
-      :size="'md'"
-      :name="'Richard Aguilar'"
-      online
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'md'"
+        :name="'Richard Aguilar'"
+        online
+        :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
-      :size="'lg'"
-      :name="'Nicholas Russell'"
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'lg'"
+        :name="'Nicholas Russell'"
+        :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
-      :size="'lg'"
-      :name="'Sean Lee'"
-      online
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'lg'"
+        :name="'Sean Lee'"
+        online
+        :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
-      :size="'xl'"
-      :name="'Alvin Ward'"
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'xl'"
+        :name="'Alvin Ward'"
+        :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
-      :size="'xl'"
-      :name="'Carlos Bishop'"
-      :picture="'https://loremflickr.com/128/128'"
-      online
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'xl'"
+        :name="'Carlos Bishop'"
+        :picture="'https://loremflickr.com/128/128'"
+        online
+        :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
-      :size="'xxl'"
-      :name="'Phil'"
-      :picture="'https://loremflickr.com/128/128'"
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'xxl'"
+        :name="'Phil'"
+        :picture="'https://loremflickr.com/128/128'"
+        :elemClass="'ui-kit__avatar-item'"
       />
       <BaseAvatar
-      :size="'xxl'"
-      online
-      :elemClass="'ui-kit__avatar-item'"
+        :size="'xxl'"
+        online
+        :elemClass="'ui-kit__avatar-item'"
       />
     </div>
     <h3 class="ui-kit__section">CarouselControl</h3>
@@ -332,6 +335,7 @@
 </template>
 
 <script>
+import BaseLoader from '@/components/ui/BaseLoader/BaseLoader.vue'
 import BaseLogo from '@/components/ui/BaseLogo/BaseLogo.vue'
 import BaseButton from '@/components/ui/BaseButton/BaseButton.vue'
 import BaseInput from '@/components/ui/BaseInput/BaseInput.vue'
@@ -350,6 +354,7 @@ export default {
   name: 'UIKit',
 
   components: {
+    BaseLoader,
     BaseLogo,
     BaseButton,
     BaseInput,
@@ -367,6 +372,7 @@ export default {
 
   data() {
     return {
+      loading: true,
       baseInput1: '',
       baseInput2: '',
       baseInput3: '',
@@ -403,6 +409,10 @@ export default {
       cardLikes1: 21,
       cardLikes2: 326
     }
+  },
+
+  mounted() {
+    setTimeout(() => this.loading = false, 3000)
   },
 
   methods: {

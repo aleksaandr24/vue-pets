@@ -26,6 +26,7 @@ body.dark-theme {
 /*=============================== Components ===========================*/
 @import "@/App.scss",
         "@/views/UIKit/UIKit.scss",
+        "@/components/ui/BaseLoader/BaseLoader.scss",
         "@/components/ui/BaseLogo/BaseLogo.scss",
         "@/components/ui/BaseButton/BaseButton.scss",
         "@/components/ui/BaseInput/BaseInput.scss",
