@@ -23,6 +23,11 @@ body.dark-theme {
   background-color: var(--color-solid-bg-dark);
 }
 
+body.loading {
+  overflow: hidden;
+  position: fixed;
+}
+
 /*=============================== Components ===========================*/
 @import "@/App.scss",
         "@/views/UIKit/UIKit.scss",

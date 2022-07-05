@@ -412,7 +412,11 @@ export default {
   },
 
   mounted() {
-    setTimeout(() => this.loading = false, 3000)
+    document.body.classList.add('loading')
+    setTimeout(() => {
+      this.loading = false
+      document.body.classList.remove('loading')
+    }, 3000)
   },
 
   methods: {

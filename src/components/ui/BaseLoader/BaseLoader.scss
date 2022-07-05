@@ -65,16 +65,16 @@
 
 @keyframes pet-loading {
   50% {
-    opacity: 1;
+    opacity: 0;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
 .base-loader-fade-enter-active,
 .base-loader-fade-leave-active {
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .base-loader-fade-enter-from,
