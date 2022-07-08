@@ -3,6 +3,7 @@
     v-show="loading"
   />
   <div class="ui-kit">
+    
     <h3 class="ui-kit__section">BaseLogo</h3>
     <div class="ui-kit__logo">
       <BaseLogo/>
@@ -26,6 +27,7 @@
         dark
       />
     </div>
+    
     <h3 class="ui-kit__section">BaseButton</h3>
     <BaseButton
       class="ui-kit__regular-button"
@@ -49,6 +51,7 @@
     >
       Маленькая
     </BaseButton>
+    
     <h3 class="ui-kit__section">BaseInput & FloatLabel</h3>
     <FloatLabel
       class="ui-kit__regular-label"
@@ -108,72 +111,27 @@
         />
       </FloatLabel>
     </div>
-    <h3 class="ui-kit__section">BaseSelect & FloatLabel fixed</h3>
-    <FloatLabel
-      class="ui-kit__regular-label"
-      :fixed="true"
-    >
+    
+    <h3 class="ui-kit__section">BaseSelect</h3>
+    <div class="ui-kit__select">
       <BaseSelect
         v-model="baseSelect1"
-        :elemClass="'ui-kit__regular-select'"
         :elemData="selectData"
-      />
-    </FloatLabel>
-    <FloatLabel
-      class="ui-kit__regular-label ui-kit__regular-label_success"
-      :fixed="true"
-    >
+      >
+        Выберите пункты
+      </BaseSelect>
+      
+    </div>
+    <div class="ui-kit__select ui-kit__select_dark">
       <BaseSelect
         v-model="baseSelect2"
-        :elemClass="'ui-kit__regular-select'"
         :elemData="selectData"
-      />
-    </FloatLabel>
-    <FloatLabel
-      class="ui-kit__regular-label ui-kit__regular-label_danger"
-      :fixed="true"
-    >
-      <BaseSelect
-        v-model="baseSelect3"
-        :elemClass="'ui-kit__regular-select'"
-        :elemData="selectData"
-      />
-    </FloatLabel>
-    <div class="ui-kit__select-dark">
-      <FloatLabel
-        class="ui-kit__regular-label ui-kit__regular-label_dark"
-        :fixed="true"
+        dark
       >
-        <BaseSelect
-          v-model="baseSelect4"
-          :elemClass="'ui-kit__regular-select '"
-          :elemData="selectData"
-          dark
-        />
-      </FloatLabel>
-      <FloatLabel
-        class="ui-kit__regular-label ui-kit__regular-label_success"
-        :fixed="true"
-      >
-        <BaseSelect
-          v-model="baseSelect5"
-          :elemClass="'ui-kit__regular-select'"
-          :elemData="selectData"
-          dark
-        />
-      </FloatLabel>
-      <FloatLabel
-        class="ui-kit__regular-label ui-kit__regular-label_danger"
-        :fixed="true"
-      >
-        <BaseSelect
-          v-model="baseSelect6"
-          :elemClass="'ui-kit__regular-select'"
-          :elemData="selectData"
-          dark
-        />
-      </FloatLabel>
+        Выберите пункты
+      </BaseSelect>
     </div>
+    
     <h3 class="ui-kit__section">BaseSwitch</h3>
     <div class="ui-kit__switch">
       <BaseSwitch
@@ -187,6 +145,7 @@
         {{ value }}
       </BaseSwitch>
     </div>
+    
     <h3 class="ui-kit__section">BaseRadio</h3>
     <div class="ui-kit__radio">
       <BaseRadio
@@ -200,6 +159,7 @@
         {{ element }}
       </BaseRadio>
     </div>
+    
     <h3 class="ui-kit__section">BaseAvatar</h3>
     <div class="ui-kit__avatar">
       <BaseAvatar
@@ -272,6 +232,7 @@
         :elemClass="'ui-kit__avatar-item'"
       />
     </div>
+    
     <h3 class="ui-kit__section">CarouselControl</h3>
     <div class="ui-kit__carousel-control">
       <CarouselControl
@@ -289,6 +250,7 @@
         dark
       />
     </div>
+    
     <h3 class="ui-kit__section">BaseCard & Badges</h3>
     <BaseCard
       :elemClass="'ui-kit__card'"
@@ -381,14 +343,11 @@ export default {
       baseInput6: '',
       baseSelect1: '',
       baseSelect2: '',
-      baseSelect3: '',
-      baseSelect4: '',
-      baseSelect5: '',
-      baseSelect6: '',
       selectData: [
-        'Пункт первый',
-        'Пункт второй',
-        'Пункт третий'
+        {name: 'Пункт первый', disabled: false},
+        {name: 'Пункт второй', disabled: true},
+        {name: 'Пункт третий', disabled: false},
+        {name: 'Пункт четвертый', disabled: false},
       ],
       baseSwitch: {
         0: '',

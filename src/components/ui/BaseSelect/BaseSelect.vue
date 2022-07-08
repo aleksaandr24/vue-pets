@@ -1,24 +1,38 @@
 <template>
-  <select
-    :class="className"
-    :value="modelValue"
-    @change="$emit('update:modelValue', $event.target.value)"
-  >
-    <option
-      disabled
-      selected
-      value=""
+  <div
+    :class="selectClassName"
+    @click="selectOpen = !selectOpen"
+    @blur="selectOpen = false"
+    tabindex="0"
     >
-      {{ elemCaption }}
-    </option>
-    <option
-      v-for="(optionText, index) in elemData"
-      :key="index"
-      class="base-select__option"
+    <div class="base-select__selected-label">
+      <slot></slot>
+    </div>
+    <div
+      :class="selectedClassName + selectOpen
+              ? 'base-select__selected-option_open'
+              : ''"
     >
-      {{ optionText }}
-    </option>
-  </select>
+      {{ selectedOption }}
+    </div>
+    <ul
+      class="base-select__options"
+      :class="{ 'base-select__options_open': selectOpen }"
+      
+    >
+      <li
+        v-for="(option, index) in elemData"
+        :key="index"
+        :class="option.disabled
+                ? 'base-select__option base-select__option_disabled'
+                : 'base-select__option'"
+        
+        @click="makeSelected(option.name)"
+      >
+        {{ option.name }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -40,11 +54,6 @@ export default {
       default: ''
     },
 
-    elemCaption: {
-      type: String,
-      default: 'Выберите пункты'
-    },
-
     elemData: {
       type: Array,
       default: []
@@ -55,14 +64,48 @@ export default {
     'update:modelValue'
   ],
 
+  data() {
+    return {
+      selectOpen: false,
+      selectedValue: null
+    }
+  },
+
   computed: {
-    className() {
+    selectClassName() {
       let classArray = ['base-select']
       if (this.dark) {
         classArray.push('base-select_dark')
       }
       classArray.push(this.elemClass)
       return classArray.join(' ')
+    },
+
+    selectedClassName() {
+      let classArray = ['base-select__selected-option']
+      if (this.dark) {
+        classArray.push('base-select__selected-option-dark')
+      }
+      classArray.push(this.elemClass)
+      return classArray.join(' ')
+    },
+
+    selectedOption() {
+      if (this.elemData.length === 0) {
+        return 'Нет элементов'
+      }
+      if (this.selectedValue === null) {
+        return 'Выбрать'
+      }
+      return this.selectedValue
+    }
+  },
+
+  methods: {
+    makeSelected(optionValue) {
+      this.selectOpen = false
+      this.selectedValue = optionValue
+      this.$emit('update:modelValue', optionValue)
     }
   }
 }
