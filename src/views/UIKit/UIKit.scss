@@ -83,11 +83,11 @@
 
   &__select {
     width: 241px;
+    padding: 10px 0;
+    @include flex-direct-vh(column);
+    gap: 10px;
 
     &_dark {
-      padding: 10px 0;
-      @include flex-direct-vh(column);
-      gap: 10px;
       background-color: var(--color-solid-bg-dark);
     }
   }

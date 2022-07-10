@@ -4,7 +4,7 @@
       :id="elemID"
       :checked="elemChecked"
       :disabled="elemDisabled"
-      @change="$emit('update:modelValue', { id: $event.target.id, checked: $event.target.checked} )"
+      @change="$emit('update:modelValue', { id: $event.target.id, checked: $event.target.checked })"
       type="checkbox"
       class="base-switch__input"
     />

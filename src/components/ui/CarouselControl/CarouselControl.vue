@@ -23,7 +23,7 @@ export default {
 
   computed: {
     elemClass() {
-      let classArray = ['carousel-control']
+      const classArray = ['carousel-control']
       if (this.prev) {
         classArray.push('carousel-control_prev')
       }

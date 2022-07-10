@@ -23,7 +23,7 @@ export default {
 
   computed: {
     className() {
-      let classArray = []
+      const classArray = []
       if (this.dark) {
         classArray.push('base-logo-dark')
         switch(this.size) {

@@ -19,7 +19,7 @@ export default {
 
   computed: {
     className() {
-      let classArray = ['badge-label']
+      const classArray = ['badge-label']
       classArray.push(this.elemClass)
       return classArray.join(' ')
     }

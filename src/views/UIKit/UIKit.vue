@@ -120,13 +120,28 @@
       >
         Выберите пункты
       </BaseSelect>
+        <BaseSelect
+        v-model="baseSelect2"
+        :elemData="selectData"
+        danger
+      >
+        Выберите пункты
+      </BaseSelect>
       
     </div>
     <div class="ui-kit__select ui-kit__select_dark">
       <BaseSelect
-        v-model="baseSelect2"
+        v-model="baseSelect3"
         :elemData="selectData"
         dark
+      >
+        Выберите пункты
+      </BaseSelect>
+      <BaseSelect
+        v-model="baseSelect4"
+        :elemData="selectData"
+        dark
+        danger
       >
         Выберите пункты
       </BaseSelect>
@@ -343,6 +358,8 @@ export default {
       baseInput6: '',
       baseSelect1: '',
       baseSelect2: '',
+      baseSelect3: '',
+      baseSelect4: '',
       selectData: [
         {name: 'Пункт первый', disabled: false},
         {name: 'Пункт второй', disabled: true},

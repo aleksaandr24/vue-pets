@@ -24,7 +24,7 @@ export default {
 
   computed: {
     className() {
-      let classArray = ['base-card']
+      const classArray = ['base-card']
       if (this.dark) {
         classArray.push('base-card_dark')
       }

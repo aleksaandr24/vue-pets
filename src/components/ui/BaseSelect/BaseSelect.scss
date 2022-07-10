@@ -8,6 +8,10 @@
     color: var(--color-solid-light);
   }
 
+  &_danger {
+    color: var(--color-solid-danger);
+  }
+
   &__selected-option {
     height: 43px;  
     padding: 0px 8px;
@@ -27,11 +31,11 @@
       background-image: url('@/assets/images/select-arrow-up.svg');
     }
 
-    &-dark {
+    &_dark {
       border-bottom-color: var(--color-solid-light);
       background-image: url('@/assets/images/select-arrow-down-dark.svg');
 
-      &_open {
+      &.base-select__selected-option_open {
         background-image: url('@/assets/images/select-arrow-up-dark.svg');
       }
     }
