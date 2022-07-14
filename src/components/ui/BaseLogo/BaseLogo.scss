@@ -1,39 +1,52 @@
 .base-logo {
   width: 25px;
-  height: 24px;
+  height: 25px;
+  margin: auto;
   background-image: url('@/assets/images/logo-sm-black.svg');
   background-repeat: no-repeat;
   background-position: center center;
 
   &_md {
-    width: 105px;
-    height: 95px;
+    width: 42px;
+    height: 42px;
     background-image: url('@/assets/images/logo-md-black.svg');
   }
 
   &_lg {
+    width: 105px;
+    height: 95px;
+    background-image: url('@/assets/images/logo-lg-black.svg');
+  }
+
+  &_xl {
     width: 185px;
     height: 166px;
-    background-image: url('@/assets/images/logo-lg-black.svg');
+    background-image: url('@/assets/images/logo-xl-black.svg');
   }
 }
 
 .base-logo-dark {
   width: 25px;
-  height: 24px;
+  height: 25px;
   background-image: url('@/assets/images/logo-sm.svg');
   background-repeat: no-repeat;
   background-position: center center;
 
   &_md {
-    width: 105px;
-    height: 95px;
+    width: 42px;
+    height: 42px;
     background-image: url('@/assets/images/logo-md.svg');
   }
 
   &_lg {
+    width: 105px;
+    height: 95px;
+    background-image: url('@/assets/images/logo-lg.svg');
+  }
+
+  &_xl {
     width: 185px;
     height: 166px;
-    background-image: url('@/assets/images/logo-lg.svg');
+    background-image: url('@/assets/images/logo-xl.svg');
   }
 }

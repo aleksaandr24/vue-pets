@@ -1,40 +1,46 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/ui-kit">ui-kit</router-link>
-  </nav>
-  <router-view/>
+  <TheHeader
+    :pageTitle="title"
+    @themeSwitch="changeTheme($event)"
+  />
+  <TheSidebar
+
+  />
+  <TheMain>
+    <router-view
+      @pageTitle="changeTitle($event)"
+    />
+  </TheMain>
 </template>
 
 <script>
+import TheSidebar from '@/components/TheSidebar/TheSidebar.vue'
+import TheHeader from '@/components/TheHeader/TheHeader.vue'
+import TheMain from '@/components/TheMain/TheMain.vue'
+
 export default {
   name: 'App',
 
-  created() {
-    document.body.classList.add('light-theme')
-  }
-}
-</script>
+  data() {
+    return {
+      title: ''
+    }
+  },
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  components: {
+    TheHeader,
+    TheSidebar,
+    TheMain
+  },
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  methods: {
+    changeTheme(appTheme) {
+      this.theme = appTheme
+    },
+    
+    changeTitle(pageTitle) {
+      this.title = pageTitle
     }
   }
 }
-</style>
+</script>

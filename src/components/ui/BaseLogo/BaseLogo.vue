@@ -33,6 +33,9 @@ export default {
           case 'lg':
             classArray.push('base-logo-dark_lg')
             break
+          case 'xl':
+            classArray.push('base-logo-dark_xl')
+            break
         }
       } else {
         classArray.push('base-logo')
@@ -42,6 +45,9 @@ export default {
             break
           case 'lg':
             classArray.push('base-logo_lg')
+            break
+          case 'xl':
+            classArray.push('base-logo_xl')
             break
         }
       }

@@ -1,7 +1,7 @@
 .ui-kit {
-  min-height: calc(100vh - 60px);
-  @include flex-direct-vh(column, center, center);
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 1rem;
 
   &__section {
     margin: 20px 0;

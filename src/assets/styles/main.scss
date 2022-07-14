@@ -13,13 +13,10 @@ body {
   width: 100%;
   overflow-y: auto;
   font-family: 'Rubik-Regular', Arial, Helvetica, sans-serif;
-}
-
-body.light-theme {
   background-color: var(--color-solid-light);
 }
 
-body.dark-theme {
+body.dark {
   background-color: var(--color-solid-bg-dark);
 }
 
@@ -44,4 +41,7 @@ body.loading {
         "@/components/ui/BaseCard/BaseCard.scss",
         "@/components/ui/BadgeLike/BadgeLike.scss",
         "@/components/ui/BadgeCounter/BadgeCounter.scss",
-        "@/components/ui/BadgeLabel/BadgeLabel.scss";
+        "@/components/ui/BadgeLabel/BadgeLabel.scss",
+        "@/components/TheHeader/TheHeader.scss",
+        "@/components/TheSidebar/TheSidebar.scss",
+        "@/components/TheMain/TheMain.scss";
