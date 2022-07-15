@@ -5,6 +5,7 @@
   border-right-color: var(--color-solid-lightgray);
   display: grid;
   grid-template-rows: auto 1fr auto;
+  justify-items: center;
   
   &_dark {
     border-right-color: var(--color-solid-primary_disabled);
@@ -13,9 +14,5 @@
   &__logo {
     height: 126px;
     padding-top: 30px;
-  }
-
-  &__menu {
-    
   }
 }

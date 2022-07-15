@@ -5,105 +5,68 @@
   <div class="ui-kit">
     
     <div class="ui-kit__grid-item">
-      <BaseCard>
-        <h3 class="ui-kit__section">BaseLogo</h3>
-        <div class="ui-kit__logo">
-          <BaseLogo/>
+      <BaseCard
+        :dark="darkTheme"
+      >
+        <h3 class="base-card__header">BaseLogo</h3>
+        <div class="ui-kit__logos">
+          <BaseLogo
+            :dark="darkTheme"
+          />
           <BaseLogo
             :size="'md'"
+            :dark="darkTheme"
           />
           <BaseLogo
             :size="'lg'"
+            :dark="darkTheme"
           />
           <BaseLogo
             :size="'xl'"
+            :dark="darkTheme"
           />
         </div>
       </BaseCard>
     </div>
     
     <div class="ui-kit__grid-item">
-      <BaseCard>
-        <div class="ui-kit__logo ui-kit__logo_dark">
-          <BaseLogo
-            dark
-          />
-          <BaseLogo
-            :size="'md'"
-            dark
-          />
-          <BaseLogo
-            :size="'lg'"
-            dark
-          />
-          <BaseLogo
-            :size="'xl'"
-            dark
-          />
+      <BaseCard
+        :dark="darkTheme"
+      >
+        <h3 class="base-card__header">BaseButton</h3>
+        <div class="ui-kit__buttons">
+          <BaseButton
+            :elemClass="'ui-kit__button'"
+          >
+            Обычная кнопка
+          </BaseButton>
+          <BaseButton 
+            :loading="true"
+            :elemClass="'ui-kit__button'"
+          >
+            Обычная кнопка
+          </BaseButton>
+          <BaseButton
+            :elemClass="'ui-kit__button_small'"
+          >
+            Маленькая
+          </BaseButton>
+          <BaseButton 
+            :loading="true"
+            :elemClass="'ui-kit__button_small'"
+          >
+            Маленькая
+          </BaseButton>
         </div>
       </BaseCard>
     </div>
     
     <div class="ui-kit__grid-item">
-      <BaseCard>
-        <h3 class="ui-kit__section">BaseButton</h3>
-        <BaseButton
-          class="ui-kit__regular-button"
-        >
-          Обычная кнопка
-        </BaseButton>
-        <BaseButton 
-          :loading="true"
-          class="ui-kit__regular-button"
-        >
-          Обычная кнопка
-        </BaseButton>
-        <BaseButton
-          class="ui-kit__small-button"
-        >
-          Маленькая
-        </BaseButton>
-        <BaseButton 
-          :loading="true"
-          class="ui-kit__small-button"
-        >
-          Маленькая
-        </BaseButton>
-      </BaseCard>
-    </div>
-    
-    <div class="ui-kit__grid-item">
-      <BaseCard>
-        <h3 class="ui-kit__section">BaseInput & FloatLabel</h3>
-        <FloatLabel
-          class="ui-kit__regular-label"
-        >
-          <BaseInput
-            v-model="baseInput1"
-            :elemClass="'ui-kit__regular-input'"
-            :placeholder="'Введите текст'"
-          />
-        </FloatLabel>
-        <FloatLabel
-          class="ui-kit__regular-label ui-kit__regular-label_success"
-        >
-          <BaseInput
-            v-model="baseInput2"
-            :elemClass="'ui-kit__regular-input ui-kit__regular-input_success'"
-            :placeholder="'Введено корректно'"
-          />
-        </FloatLabel>
-        <FloatLabel
-          class="ui-kit__regular-label ui-kit__regular-label_danger"
-        >
-          <BaseInput
-            v-model="baseInput3"
-            :placeholder="'Введено с ошибкой'"
-            :errorMessage="'Сообщение об ошибке'"
-            :elemClass="'ui-kit__regular-input ui-kit__regular-input_danger'"
-          />
-        </FloatLabel>
-        <div class="ui-kit__input-dark">
+      <BaseCard
+        :dark="darkTheme"
+      >
+        <h3 class="base-card__header">BaseInput & FloatLabel</h3>
+        <div class="ui-kit__inputs">
           <FloatLabel
             class="ui-kit__regular-label ui-kit__regular-label_dark"
           >
@@ -137,8 +100,10 @@
     </div>
     
     <div class="ui-kit__grid-item">
-      <BaseCard>
-        <h3 class="ui-kit__section">BaseSelect</h3>
+      <BaseCard
+        :dark="darkTheme"
+      >
+        <h3 class="base-card__header">BaseSelect</h3>
         <div class="ui-kit__select">
           <BaseSelect
             v-model="baseSelect1"
@@ -176,8 +141,10 @@
     </div>
     
     <div class="ui-kit__grid-item">
-      <BaseCard>
-        <h3 class="ui-kit__section">BaseSwitch</h3>
+      <BaseCard
+        :dark="darkTheme"
+      >
+        <h3 class="base-card__header">BaseSwitch</h3>
         <div class="ui-kit__switch">
           <BaseSwitch
             v-for="(value, index) in switchData"
@@ -194,8 +161,10 @@
     </div>
     
     <div class="ui-kit__grid-item">
-      <BaseCard>
-        <h3 class="ui-kit__section">BaseRadio</h3>
+      <BaseCard
+        :dark="darkTheme"
+      >
+        <h3 class="base-card__header">BaseRadio</h3>
         <div class="ui-kit__radio">
           <BaseRadio
             v-for="(element, index) in radioData"
@@ -212,8 +181,10 @@
     </div>
     
     <div class="ui-kit__grid-item">
-      <BaseCard>
-        <h3 class="ui-kit__section">BaseAvatar</h3>
+      <BaseCard
+        :dark="darkTheme"
+      >
+        <h3 class="base-card__header">BaseAvatar</h3>
         <div class="ui-kit__avatar">
           <BaseAvatar
             :size="'xs'"
@@ -289,8 +260,10 @@
     </div>
     
     <div class="ui-kit__grid-item">
-      <BaseCard>
-        <h3 class="ui-kit__section">CarouselControl</h3>
+      <BaseCard
+        :dark="darkTheme"
+      >
+        <h3 class="base-card__header">CarouselControl</h3>
         <div class="ui-kit__carousel-control">
           <CarouselControl
             prev
@@ -314,7 +287,7 @@
       <BaseCard
       :elemClass="'ui-kit__card'"
     >
-      <h3 class="ui-kit__section">BaseCard & Badges</h3>
+      <h3 class="base-card__header">BaseCard & Badges</h3>
       <h5>BaseCard light theme</h5>
       <div class="ui-kit__badges">
         <BadgeLabel
@@ -396,7 +369,8 @@ export default {
 
   props: {
     theme: {
-      type: 'String'
+      type: String,
+      default: 'light'
     }
   },
 
@@ -442,6 +416,15 @@ export default {
       ],
       cardLikes1: 21,
       cardLikes2: 326
+    }
+  },
+
+  computed: {
+    darkTheme() {
+      if (this.theme === 'dark') {
+        return true
+      }
+      return false
     }
   },
 

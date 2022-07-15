@@ -3,6 +3,8 @@
   border-radius: 10px;
   background-color: var(--color-solid-primary);
   @include flex-direct-vh(row, center, center);
+  @include text-style('RM', 18px, 21px);
+  color: var(--color-solid-light);
 
   &:hover {
     cursor: pointer;

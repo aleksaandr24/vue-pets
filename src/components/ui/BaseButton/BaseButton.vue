@@ -1,6 +1,6 @@
 <template>
   <button
-    class="base-button"
+    :class="buttonClassName"
     :disabled="loading"
   >
     <div
@@ -24,6 +24,19 @@ export default {
     loading: {
       type: Boolean,
       default: false
+    },
+
+    elemClass: {
+      type: String,
+      default: ''
+    }
+  },
+
+  computed: {
+    buttonClassName() {
+      const classArray = ['base-button']
+      classArray.push(this.elemClass)
+      return classArray.join(' ')
     }
   }
 }

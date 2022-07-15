@@ -2,40 +2,31 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 1rem;
+  justify-items: stretch;
 
-  &__section {
-    margin: 20px 0;
-
-    &:before {
-      content: '<';
-    }
-
-    &:after {
-      content: '>';
-    }
+  &__grid-item {
+    border: 1px dotted red;
   }
 
-  &__logo {
-    width: 350px;
+  &__logos {
+    width: 100%;
     @include flex-direct-vh(row, space-between, center);
-
-    &_dark {
-      background-color: var(--color-solid-bg-dark);
-    }
   }
 
-  &__regular-button {
+  &__buttons {
+    width: 100%;
+    @include flex-direct-vh(column, normal, center);
+    gap: 1rem;
+  }
+
+  &__button {
     width: 325px;
     height: 48px;
-    @include text-style('RM', 18px, 21px);
-    color: var(--color-solid-light);
   }
 
-  &__small-button {
+  &__button_small {
     width: 150px;
     height: 40px;
-    @include text-style('RM', 18px, 21px);
-    color: var(--color-solid-light);
   }
 
   &__regular-label {
@@ -74,11 +65,9 @@
     }
   }
 
-  &__input-dark {
-    padding: 10px 0;
+  &__inputs {
     @include flex-direct-vh(column);
-    gap: 10px;
-    background-color: var(--color-solid-bg-dark);
+    gap: 2rem;
   }
 
   &__select {

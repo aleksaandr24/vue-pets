@@ -1,8 +1,13 @@
 .base-card {
-  background-color: #FFFFFF;
   border-radius: 16px;
+  padding: 30px;
+  background-color: var(--color-solid-white);
 
   &_dark {
     background-color: #1B2335;
+  }
+
+  &__header {
+    @include text-style('RR', 24px, 28px)
   }
 }

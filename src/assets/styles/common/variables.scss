@@ -7,6 +7,7 @@
   --color-solid-success: #66CB9F;
   --color-solid-danger: #F16063;
   --color-solid-light: #EDF2F7;
+  --color-solid-white: #FFFFFF;
   --color-solid-lightgray: #D5D5DC;
   --color-solid-darklight: #17171B;
 
@@ -17,4 +18,12 @@
   --color-gradient-pink: linear-gradient(224.47deg, #FF92AE 8.18%, #FF3D9A 95.84%);
   --color-gradient-green: linear-gradient(225deg, #67E9F1 0%, #24E795 100%);
   --color-gradient-shadow: linear-gradient(225deg, rgba(41, 39, 46, 0.8) 0%, rgba(39, 39, 46, 0.8) 100%);
+
+  --color-primary: var(--color-solid-darklight);
+  --bg-color-primary: var(--color-solid-light);
+}
+
+[theme="dark"] {
+  --color-primary: var(--color-solid-white);
+  --bg-color-primary: var(--color-solid-bg-dark);
 }

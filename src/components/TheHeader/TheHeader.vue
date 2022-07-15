@@ -7,12 +7,12 @@
     </div>
     <div class="header__themes">
       <BaseSwitch
-        v-model="lightTheme"
+        v-model="currentTheme"
         :elemID="'themeSwitch'"
-        :elemChecked="true"
+        :elemChecked="themeSwitchChecked"
         :elemDisabled="false"
       >
-        Dark/Light
+        {{ themeName }}
       </BaseSwitch>
     </div>
     <div class="header__notifications">
@@ -29,6 +29,7 @@
 <script>
 import BaseSwitch from '@/components/ui/BaseSwitch/BaseSwitch.vue'
 import BaseAvatar from '@/components/ui/BaseAvatar/BaseAvatar.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'TheHeader',
@@ -39,6 +40,11 @@ export default {
   },
 
   props: {
+    theme: {
+      type: String,
+      default: 'light'
+    },
+    
     pageTitle: {
       type: String,
       default: 'Page Title'
@@ -51,12 +57,32 @@ export default {
 
   data() {
     return {
-      lightTheme: {id: 'themeSwitch', checked: true}
+      currentTheme: {}
+    }
+  },
+
+  computed: {
+    ...mapGetters({
+      appTheme: 'getAppTheme'
+    }),
+
+    themeSwitchChecked() {
+      if (this.appTheme === 'light') {
+        return true
+      }
+      return false
+    },
+
+    themeName() {
+      if (this.appTheme === 'light') {
+        return 'Light'
+      }
+      return 'Dark'
     }
   },
 
   watch: {
-    lightTheme(newValue) {
+    currentTheme(newValue) {
       if (newValue.checked) {
         this.$emit('themeSwitch', 'light')
       } else {

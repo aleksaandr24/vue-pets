@@ -1,11 +1,14 @@
 <template>
-  <aside class="sidebar">
+  <aside 
+    :class="sidebarClassName"
+  >
     <div class="sidebar__logo">
       <router-link
         to="/"
       >
         <BaseLogo
           :size="'md'"
+          :dark="darkTheme"
         />
       </router-link>
     </div>
@@ -28,6 +31,30 @@ export default {
 
   components: {
     BaseLogo
+  },
+
+  props: {
+    theme: {
+      type: String,
+      default: 'light'
+    }
+  },
+
+  computed: {
+    darkTheme() {
+      if (this.theme === 'dark') {
+        return true
+      }
+      return false
+    },
+
+    sidebarClassName() {
+      const classArray = ['sidebar']
+      if (this.darkTheme) {
+        classArray.push('sidebar_dark')
+      }
+      return classArray.join(' ')
+    }
   }
 }
 </script>
