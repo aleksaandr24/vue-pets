@@ -21,9 +21,11 @@
 
   --color-primary: var(--color-solid-darklight);
   --bg-color-primary: var(--color-solid-light);
+  --bg-color-secondary: var(--color-solid-white);
 }
 
 [theme="dark"] {
   --color-primary: var(--color-solid-white);
   --bg-color-primary: var(--color-solid-bg-dark);
+  --bg-color-secondary: #1B2335;
 }

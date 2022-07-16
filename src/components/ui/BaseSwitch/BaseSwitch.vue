@@ -38,7 +38,7 @@ export default {
 
     elemDisabled: {
       type: Boolean,
-      default: true
+      default: false
     },
 
     elemChecked: {

@@ -26,6 +26,11 @@ export default {
       default: false
     },
 
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+
     elemClass: {
       type: String,
       default: ''

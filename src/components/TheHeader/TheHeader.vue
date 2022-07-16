@@ -6,14 +6,12 @@
       </h2>
     </div>
     <div class="header__themes">
-      <BaseSwitch
+      <TheHeaderThemeSwitch
         v-model="currentTheme"
         :elemID="'themeSwitch'"
         :elemChecked="themeSwitchChecked"
         :elemDisabled="false"
-      >
-        {{ themeName }}
-      </BaseSwitch>
+      />
     </div>
     <div class="header__notifications">
       <div>
@@ -27,16 +25,16 @@
 </template>
 
 <script>
-import BaseSwitch from '@/components/ui/BaseSwitch/BaseSwitch.vue'
 import BaseAvatar from '@/components/ui/BaseAvatar/BaseAvatar.vue'
+import TheHeaderThemeSwitch from '@/components/TheHeaderThemeSwitch/TheHeaderThemeSwitch.vue'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'TheHeader',
 
   components: {
-    BaseSwitch,
-    BaseAvatar
+    BaseAvatar,
+    TheHeaderThemeSwitch
   },
 
   props: {
@@ -71,13 +69,6 @@ export default {
         return true
       }
       return false
-    },
-
-    themeName() {
-      if (this.appTheme === 'light') {
-        return 'Light'
-      }
-      return 'Dark'
     }
   },
 

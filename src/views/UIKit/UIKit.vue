@@ -8,38 +8,6 @@
       <BaseCard
         :dark="darkTheme"
       >
-        <h3 class="base-card__header ui-kit__header">BaseButton</h3>
-        <div class="ui-kit__buttons">
-          <BaseButton
-            :elemClass="'ui-kit__button'"
-          >
-            Обычная кнопка
-          </BaseButton>
-          <BaseButton 
-            :loading="true"
-            :elemClass="'ui-kit__button'"
-          >
-            Обычная кнопка
-          </BaseButton>
-          <BaseButton
-            :elemClass="'ui-kit__button_small'"
-          >
-            Маленькая
-          </BaseButton>
-          <BaseButton 
-            :loading="true"
-            :elemClass="'ui-kit__button_small'"
-          >
-            Маленькая
-          </BaseButton>
-        </div>
-      </BaseCard>
-    </div>
-    
-    <div class="ui-kit__grid-item">
-      <BaseCard
-        :dark="darkTheme"
-      >
         <h3 class="base-card__header ui-kit__header">BaseInput & FloatLabel</h3>
         <div class="ui-kit__inputs">
           <FloatLabel
@@ -182,6 +150,50 @@
     </BaseCard>
     </div>
 
+    <div class="ui-kit__grid-item">
+      <BaseCard
+        :dark="darkTheme"
+      >
+        <h3 class="base-card__header ui-kit__header">BaseButton</h3>
+        <div class="ui-kit__buttons">
+          <BaseButton
+            :elemClass="'ui-kit__button'"
+          >
+            Обычная кнопка
+          </BaseButton>
+          <BaseButton
+            :elemClass="'ui-kit__button'"
+            :disabled="true"
+          >
+            Заблокирована
+          </BaseButton>
+          <BaseButton 
+            :loading="true"
+            :elemClass="'ui-kit__button'"
+          >
+            Обычная кнопка
+          </BaseButton>
+          <BaseButton
+            :elemClass="'ui-kit__button_small'"
+          >
+            Маленькая
+          </BaseButton>
+          <BaseButton
+            :elemClass="'ui-kit__button_small'"
+            :disabled="true"
+          >
+            Заблокирована
+          </BaseButton>
+          <BaseButton 
+            :loading="true"
+            :elemClass="'ui-kit__button_small'"
+          >
+            Маленькая
+          </BaseButton>
+        </div>
+      </BaseCard>
+    </div>
+    
     <div class="ui-kit__grid-item">
       <BaseCard
         :dark="darkTheme"

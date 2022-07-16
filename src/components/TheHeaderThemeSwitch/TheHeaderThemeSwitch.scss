@@ -1,0 +1,56 @@
+.theme-switch {
+	@include flex-direct-vh(row);
+
+  &__input {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+
+    &:checked + .theme-switch__label {
+      background-color: var(--color-solid-white);
+      background-image: url('@/assets/images/moon.svg');
+      background-repeat: no-repeat;
+      background-position: 15%;
+    }
+  
+    &:checked + .theme-switch__label::after {
+      left: calc(100% - 5px);
+      transform: translateX(-100%);
+      background-image: url('@/assets/images/sun.svg');
+    }
+  }
+
+  &__label {
+    margin-right: 10px;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 100px;
+    height: 46px;
+    background-color: var(--bg-color-secondary);
+    background-image: url('@/assets/images/sun-dark.svg');
+    background-repeat: no-repeat;
+    background-position: 85%;
+    display: block;
+    border-radius: 20px;
+    position: relative;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 5px;
+      width: 54px;
+      height: 33px;
+      background-color: var(--color-solid-primary);
+      background-image: url('@/assets/images/moon-dark.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-radius: 16px;
+      transition: 0.1s ease-in-out;
+    }
+
+    &:active:after {
+      width: 36px;
+    }
+  }
+}
