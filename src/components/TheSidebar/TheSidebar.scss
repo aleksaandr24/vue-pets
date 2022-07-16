@@ -15,4 +15,18 @@
     height: 126px;
     padding-top: 30px;
   }
+
+  &__menu {
+    height: 372px;
+  }
+
+  &__logout {
+    padding-bottom: 30px;
+  }
+}
+
+.menu-list {
+  height: 100%;
+  list-style-type: none;
+  @include flex-direct-vh(column, space-between);
 }
