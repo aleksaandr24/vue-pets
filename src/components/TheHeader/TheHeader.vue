@@ -13,10 +13,10 @@
         :elemDisabled="false"
       />
     </div>
-    <div class="header__notifications">
-      <div>
-        NTF
-      </div>
+    <div class="header__icons">
+      <TheHeaderNotifications
+        :dark="darkTheme"
+      />
       <BaseAvatar
         :size="'md'"
       />
@@ -27,6 +27,7 @@
 <script>
 import BaseAvatar from '@/components/ui/BaseAvatar/BaseAvatar.vue'
 import TheHeaderThemeSwitch from '@/components/TheHeaderThemeSwitch/TheHeaderThemeSwitch.vue'
+import TheHeaderNotifications from '@/components/TheHeaderNotifications/TheHeaderNotifications.vue'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -34,7 +35,8 @@ export default {
 
   components: {
     BaseAvatar,
-    TheHeaderThemeSwitch
+    TheHeaderThemeSwitch,
+    TheHeaderNotifications
   },
 
   props: {
@@ -63,6 +65,13 @@ export default {
     ...mapGetters({
       appTheme: 'getAppTheme'
     }),
+
+    darkTheme() {
+      if (this.theme === 'dark') {
+        return true
+      }
+      return false
+    },
 
     themeSwitchChecked() {
       if (this.appTheme === 'light') {

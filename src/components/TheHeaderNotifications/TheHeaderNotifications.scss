@@ -1,0 +1,31 @@
+.notifications {
+  position: relative;
+  @include flex-direct-vh(row, center, center);
+
+  &__circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1;
+    background-color: var(--bg-color-secondary);
+    background-image: url('@/assets/images/notifications.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &_dark {
+      background-image: url('@/assets/images/notifications-dark.svg');
+    }
+  }
+
+  &__badge {
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 70%;
+    background-color: var(--color-solid-danger);
+  }
+}
