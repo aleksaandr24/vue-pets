@@ -39,6 +39,11 @@ export default {
       type: String
     },
 
+    elemData: {
+      type: Array,
+      default: []
+    },
+
     dark: {
       type: Boolean,
       default: false
@@ -47,11 +52,6 @@ export default {
     danger: {
       type: Boolean,
       default: false
-    },
-
-    elemData: {
-      type: Array,
-      default: []
     }
   },
 

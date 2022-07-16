@@ -1,11 +1,10 @@
 <template>
   <input
-    type="text"
-    class="base-input"
-    :class="elemClass"
+    :class="inputClassName"
     :value="modelValue"
     :placeholder="placeholder"
     @input="$emit('update:modelValue', $event.target.value)"
+    type="text"
   />
   <br>
   <span class="base-input__message">
@@ -40,6 +39,14 @@ export default {
 
   emits: [
     'update:modelValue'
-  ]
+  ],
+
+  computed: {
+    inputClassName() {
+      const classArray = ['base-input']
+      classArray.push(this.elemClass)
+      return classArray.join(' ')
+    }
+  }
 }
 </script>

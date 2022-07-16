@@ -8,32 +8,7 @@
       <BaseCard
         :dark="darkTheme"
       >
-        <h3 class="base-card__header">BaseLogo</h3>
-        <div class="ui-kit__logos">
-          <BaseLogo
-            :dark="darkTheme"
-          />
-          <BaseLogo
-            :size="'md'"
-            :dark="darkTheme"
-          />
-          <BaseLogo
-            :size="'lg'"
-            :dark="darkTheme"
-          />
-          <BaseLogo
-            :size="'xl'"
-            :dark="darkTheme"
-          />
-        </div>
-      </BaseCard>
-    </div>
-    
-    <div class="ui-kit__grid-item">
-      <BaseCard
-        :dark="darkTheme"
-      >
-        <h3 class="base-card__header">BaseButton</h3>
+        <h3 class="base-card__header ui-kit__header">BaseButton</h3>
         <div class="ui-kit__buttons">
           <BaseButton
             :elemClass="'ui-kit__button'"
@@ -65,34 +40,37 @@
       <BaseCard
         :dark="darkTheme"
       >
-        <h3 class="base-card__header">BaseInput & FloatLabel</h3>
+        <h3 class="base-card__header ui-kit__header">BaseInput & FloatLabel</h3>
         <div class="ui-kit__inputs">
           <FloatLabel
-            class="ui-kit__regular-label ui-kit__regular-label_dark"
+            class="ui-kit__regular-label"
           >
             <BaseInput
-              v-model="baseInput4"
-              :elemClass="'ui-kit__regular-input ui-kit__regular-input_dark'"
+              v-model="baseInput1"
               :placeholder="'Введите текст'"
+              :elemClass="darkTheme ? 'ui-kit__regular-input ui-kit__regular-input_dark'
+                                    : 'ui-kit__regular-input'"
             />
           </FloatLabel>
           <FloatLabel
             class="ui-kit__regular-label ui-kit__regular-label_success"
           >
             <BaseInput
-              v-model="baseInput5"
-              :elemClass="'ui-kit__regular-input ui-kit__regular-input_success'"
+              v-model="baseInput2"
               :placeholder="'Введено корректно'"
+              :elemClass="'ui-kit__regular-input ui-kit__regular-input_success'"
+              
             />
           </FloatLabel>
           <FloatLabel
             class="ui-kit__regular-label ui-kit__regular-label_danger"
           >
             <BaseInput
-              v-model="baseInput6"
+              v-model="baseInput3"
               :placeholder="'Введено с ошибкой'"
               :errorMessage="'Сообщение об ошибке'"
               :elemClass="'ui-kit__regular-input ui-kit__regular-input_danger'"
+              
             />
           </FloatLabel>
         </div>
@@ -103,35 +81,19 @@
       <BaseCard
         :dark="darkTheme"
       >
-        <h3 class="base-card__header">BaseSelect</h3>
-        <div class="ui-kit__select">
+        <h3 class="base-card__header ui-kit__header">BaseSelect</h3>
+        <div class="ui-kit__selects">
           <BaseSelect
             v-model="baseSelect1"
             :elemData="selectData"
+            :dark="darkTheme"
           >
             Выберите пункты
           </BaseSelect>
             <BaseSelect
             v-model="baseSelect2"
             :elemData="selectData"
-            danger
-          >
-            Выберите пункты
-          </BaseSelect>
-          
-        </div>
-        <div class="ui-kit__select ui-kit__select_dark">
-          <BaseSelect
-            v-model="baseSelect3"
-            :elemData="selectData"
-            dark
-          >
-            Выберите пункты
-          </BaseSelect>
-          <BaseSelect
-            v-model="baseSelect4"
-            :elemData="selectData"
-            dark
+            :dark="darkTheme"
             danger
           >
             Выберите пункты
@@ -144,8 +106,8 @@
       <BaseCard
         :dark="darkTheme"
       >
-        <h3 class="base-card__header">BaseSwitch</h3>
-        <div class="ui-kit__switch">
+        <h3 class="base-card__header ui-kit__header">BaseSwitch</h3>
+        <div class="ui-kit__switches">
           <BaseSwitch
             v-for="(value, index) in switchData"
             v-model="baseSwitch[index]"
@@ -164,8 +126,8 @@
       <BaseCard
         :dark="darkTheme"
       >
-        <h3 class="base-card__header">BaseRadio</h3>
-        <div class="ui-kit__radio">
+        <h3 class="base-card__header ui-kit__header">BaseRadio</h3>
+        <div class="ui-kit__radios">
           <BaseRadio
             v-for="(element, index) in radioData"
             v-model="baseRadio"
@@ -184,8 +146,48 @@
       <BaseCard
         :dark="darkTheme"
       >
-        <h3 class="base-card__header">BaseAvatar</h3>
-        <div class="ui-kit__avatar">
+        <h3 class="base-card__header ui-kit__header">CarouselControl</h3>
+        <div class="ui-kit__carousel-controls">
+          <CarouselControl
+            :dark="darkTheme"
+            prev
+          />
+          <CarouselControl
+            :dark="darkTheme"
+          />
+        </div>
+      </BaseCard>
+    </div>
+    
+    <div class="ui-kit__grid-item">
+      <BaseCard
+        :dark="darkTheme"
+      >
+        <h3 class="base-card__header ui-kit__header">BaseCard & Badges</h3>
+        <div class="ui-kit__badges">
+          <BadgeLabel
+            :elemClass="'ui-kit__label'"
+          >
+            Label
+          </BadgeLabel>
+          <div class="ui-kit__likes">
+            <BadgeCounter
+              :likes="cardLikes1"
+            />
+            <BadgeLike
+              @eventLike="increaseLikes(1)"
+            />
+          </div>
+        </div>
+    </BaseCard>
+    </div>
+
+    <div class="ui-kit__grid-item">
+      <BaseCard
+        :dark="darkTheme"
+      >
+        <h3 class="base-card__header ui-kit__header">BaseAvatar</h3>
+        <div class="ui-kit__avatars">
           <BaseAvatar
             :size="'xs'"
             :name="'James Parker'"
@@ -263,71 +265,27 @@
       <BaseCard
         :dark="darkTheme"
       >
-        <h3 class="base-card__header">CarouselControl</h3>
-        <div class="ui-kit__carousel-control">
-          <CarouselControl
-            prev
+        <h3 class="base-card__header ui-kit__header">BaseLogo</h3>
+        <div class="ui-kit__logos">
+          <BaseLogo
+            :dark="darkTheme"
           />
-          <CarouselControl
+          <BaseLogo
+            :size="'md'"
+            :dark="darkTheme"
           />
-        </div>
-        <div class="ui-kit__carousel-control ui-kit__carousel-control_dark">
-          <CarouselControl
-            prev
-            dark
+          <BaseLogo
+            :size="'lg'"
+            :dark="darkTheme"
           />
-          <CarouselControl
-            dark
+          <BaseLogo
+            :size="'xl'"
+            :dark="darkTheme"
           />
         </div>
       </BaseCard>
     </div>
-    
-    <div class="ui-kit__grid-item">
-      <BaseCard
-      :elemClass="'ui-kit__card'"
-    >
-      <h3 class="base-card__header">BaseCard & Badges</h3>
-      <h5>BaseCard light theme</h5>
-      <div class="ui-kit__badges">
-        <BadgeLabel
-          :elemClass="'ui-kit__label'"
-        >
-          Label
-        </BadgeLabel>
-        <div class="ui-kit__likes">
-          <BadgeCounter
-            :likes="cardLikes1"
-          />
-          <BadgeLike
-            @eventLike="increaseLikes(1)"
-          />
-        </div>
-      </div>
-    </BaseCard>
-    <BaseCard
-      :elemClass="'ui-kit__card ui-kit__card_dark'"
-      dark
-    >
-      <h5>BaseCard dark theme</h5>
-      <div class="ui-kit__badges">
-        <BadgeLabel
-          :elemClass="'ui-kit__label ui-kit__label_yellow'"
-        >
-          Label
-        </BadgeLabel>
-        <div class="ui-kit__likes">
-          <BadgeCounter
-            :likes="cardLikes2"
-          />
-          <BadgeLike
-            @eventLike="increaseLikes(2)"
-          />
-        </div>
-      </div>
-    </BaseCard>
-    </div>
-    
+
   </div>
 </template>
 
@@ -385,13 +343,8 @@ export default {
       baseInput1: '',
       baseInput2: '',
       baseInput3: '',
-      baseInput4: '',
-      baseInput5: '',
-      baseInput6: '',
       baseSelect1: '',
       baseSelect2: '',
-      baseSelect3: '',
-      baseSelect4: '',
       selectData: [
         {name: 'Пункт первый', disabled: false},
         {name: 'Пункт второй', disabled: true},
@@ -406,7 +359,7 @@ export default {
       switchData: [
         'switch1',
         'switch2',
-        'switch3'
+        'switch3_disabled'
       ],
       baseRadio: '',
       radioData: [
@@ -414,8 +367,7 @@ export default {
         'второй',
         'третий'
       ],
-      cardLikes1: 21,
-      cardLikes2: 326
+      cardLikes1: 21
     }
   },
 
@@ -444,8 +396,6 @@ export default {
     increaseLikes(id) {
       if (id === 1) {
         this.cardLikes1++
-      } else if (id === 2) {
-        this.cardLikes2++
       }
     }
   }

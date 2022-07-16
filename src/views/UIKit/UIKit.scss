@@ -3,14 +3,15 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 1rem;
   justify-items: stretch;
-
-  &__grid-item {
-    border: 1px dotted red;
+  
+  &__header {
+    margin-bottom: 1rem;
   }
 
   &__logos {
     width: 100%;
-    @include flex-direct-vh(row, space-between, center);
+    @include flex-direct-vh(column, center, center);
+    gap: 1rem;
   }
 
   &__buttons {
@@ -29,6 +30,11 @@
     height: 40px;
   }
 
+  &__inputs {
+    @include flex-direct-vh(column);
+    gap: 2rem;
+  }
+  
   &__regular-label {
     @include text-style('RR');
 
@@ -46,56 +52,43 @@
   }
 
   &__regular-input {
-    width: 241px;
+    width: 100%;
     height: 37px;
     @include text-style('RR', 14px);
-
-    &_danger {
-      color: var(--color-solid-danger);
-      border-color: var(--color-solid-danger);
-    }
-
-    &_success {
-      color: var(--color-solid-success);
-      border-color: var(--color-solid-success);
-    }
 
     &_dark {
       color: var(--color-solid-light);
     }
-  }
 
-  &__inputs {
-    @include flex-direct-vh(column);
-    gap: 2rem;
-  }
+    &_danger {
+      color: var(--color-solid-danger);
+    }
 
-  &__select {
-    width: 241px;
-    padding: 10px 0;
-    @include flex-direct-vh(column);
-    gap: 10px;
-
-    &_dark {
-      background-color: var(--color-solid-bg-dark);
+    &_success {
+      color: var(--color-solid-success);
     }
   }
 
-  &__switch {
-    width: 241px;
+  &__selects {
+    width: 100%;
+    @include flex-direct-vh(column);
+    gap: 10px;
+  }
+
+  &__switches {
     @include flex-direct-vh(column);
     gap: 10px;
     @include text-style('RR', 14px, 21px);
   }
 
-  &__radio {
-    width: 241px;
+  &__radios {
+    width: 100%;
     @include flex-direct-vh(row, space-between);
     @include text-style('RR', 14px, 21px);
   }
 
-  &__avatar {
-    width: 320px;
+  &__avatars {
+    width: 100%;
     @include flex-direct-vh(row);
     flex-wrap: wrap;
   }
@@ -105,26 +98,9 @@
     margin: 5px 0;
   }
 
-  &__carousel-control {
-    width: 250px;
+  &__carousel-controls {
+    width: 100%;
     @include flex-direct-vh(row, space-evenly);
-
-    &_dark {
-      background-color: var(--color-solid-bg-dark);
-    }
-  }
-
-  &__card {
-    width: 300px;
-    height: 200px;
-    padding: 10px;
-    @include flex-direct-vh(column, space-between, center);
-    @include text-style('RR', 14px, 22px);
-    color: var(--color-solid-darklight);
-
-    &_dark {
-      color: #FFFFFF;
-    }
   }
 
   &__badges {
@@ -133,12 +109,8 @@
   }
 
   &__label {
-    background-color: var(--color-solid-primary);
+    background-color: #FCC064;
     color: var(--color-solid-light);
-
-    &_yellow {
-      background-color: #FCC064;
-    }
   }
 
   &__likes {

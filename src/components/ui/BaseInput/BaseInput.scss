@@ -2,8 +2,9 @@
   padding-left: 8px;
   background: transparent;
   border: none;
-  border-bottom: 1px solid;
-
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  
   &:focus {
     outline: none;
   }
