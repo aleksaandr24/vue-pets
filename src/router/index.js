@@ -11,7 +11,10 @@ const routes = [
   {
     path: '/ui-kit',
     name: 'UIKit',
-    component: () => import('../views/UIKit/UIKit.vue')
+    component: () => import('@/views/UIKit/UIKit.vue'),
+    meta: {
+      layout: 'default-layout'
+    }
   }
 ]
 

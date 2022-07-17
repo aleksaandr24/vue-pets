@@ -1,45 +1,37 @@
 <template>
-  <TheHeader
+  <component
+    :is="layout"
+    :screenWidth="screenWidth"
     :theme="theme"
-    :pageTitle="title"
     @themeSwitch="changeTheme($event)"
-  />
-  <TheSidebar
-    :theme="theme"
-  />
-  <TheMain>
+  >
     <router-view
       :theme="theme"
-      @pageTitle="changeTitle($event)"
     />
-  </TheMain>
+  </component>
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader/TheHeader.vue'
-import TheSidebar from '@/components/TheSidebar/TheSidebar.vue'
-import TheMain from '@/components/TheMain/TheMain.vue'
+
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'App',
 
-  components: {
-    TheHeader,
-    TheSidebar,
-    TheMain
-  },
-
   data() {
     return {
-      title: ''
+      screenWidth: window.innerWidth
     }
   },
 
   computed: {
     ...mapGetters({
       theme: 'getAppTheme'
-    })
+    }),
+
+    layout() {
+      return this.$route.meta.layout || 'default-layout'
+    }
   },
 
   created() {
@@ -51,15 +43,25 @@ export default {
       sessionStorage.setItem("store", JSON.stringify(this.$store.state))
     })
     
+    window.addEventListener('resize', this.onResize)
+
     if (this.theme === 'dark') {
       document.body.setAttribute('theme', 'dark')
     }
+  },
+
+  destroyed() {
+    window.removeEventListener('resize', this.onResize)
   },
 
   methods: {
     ...mapActions([
       'changeAppTheme'
     ]),
+
+    onResize() {
+      this.screenWidth = window.innerWidth
+    },
 
     changeTheme(appTheme) {
       this.changeAppTheme(appTheme)
@@ -68,10 +70,6 @@ export default {
       } else {
         document.body.removeAttribute('theme')
       }
-    },
-    
-    changeTitle(pageTitle) {
-      this.title = pageTitle
     }
   }
 }

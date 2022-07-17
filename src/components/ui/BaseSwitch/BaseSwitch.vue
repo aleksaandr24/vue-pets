@@ -17,7 +17,7 @@
       :for="elemID"
       class="base-switch__caption"
     >
-      <slot></slot>
+      <slot/>
     </label>
   </div>
 </template>

@@ -6,7 +6,7 @@
     tabindex="0"
     >
     <div class="base-select__selected-label">
-      <slot></slot>
+      <slot/>
     </div>
     <div
       :class="selectedClassName"

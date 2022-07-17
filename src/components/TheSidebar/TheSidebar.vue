@@ -2,6 +2,9 @@
   <aside 
     :class="sidebarClassName"
   >
+    <div class="sidebar__mobile-menu">
+      <button type="button" class="sidebar__menu-button"></button>
+    </div>
     <div class="sidebar__logo">
       <router-link
         to="/"

@@ -18,7 +18,7 @@
         :dark="darkTheme"
       />
       <BaseAvatar
-        :size="'md'"
+        :size="avatarSize"
       />
     </div>
   </header>
@@ -40,6 +40,10 @@ export default {
   },
 
   props: {
+    screenWidth: {
+      type: Number
+    },
+    
     theme: {
       type: String,
       default: 'light'
@@ -78,6 +82,13 @@ export default {
         return true
       }
       return false
+    },
+
+    avatarSize() {
+      if (this.screenWidth <= 767) {
+        return 'sm'
+      }
+      return 'md'
     }
   },
 

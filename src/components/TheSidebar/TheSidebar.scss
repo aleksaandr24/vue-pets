@@ -11,6 +11,25 @@
     border-right-color: var(--color-solid-primary_disabled);
   }
 
+  &__mobile-menu {
+    display: none;
+    width: 46px;
+    height: 46px;
+    padding: 30px 0 0 30px;
+  }
+
+  &__menu-button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    background-image: url('@/assets/images/menu-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  
   &__logo {
     height: 126px;
     padding-top: 30px;
@@ -22,6 +41,36 @@
 
   &__logout {
     padding-bottom: 30px;
+  }
+
+  @media screen and (max-width: 1279px) {
+    border: none;
+    
+    &__mobile-menu {
+      display: block;
+    }
+    
+    &__logo {
+      display: none;
+    }
+  
+    &__menu {
+      display: none;
+    }
+  
+    &__logout {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    display: block;
+
+    &__mobile-menu {
+      width: 32px;
+      height: 32px;
+      padding: 64px 0 0 25px;
+    }
   }
 }
 

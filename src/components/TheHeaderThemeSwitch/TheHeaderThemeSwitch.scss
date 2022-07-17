@@ -24,7 +24,7 @@
     margin-right: 10px;
     cursor: pointer;
     text-indent: -9999px;
-    width: 100px;
+    width: 110px;
     height: 46px;
     background-color: var(--bg-color-secondary);
     background-image: url('@/assets/images/sun-dark.svg');
@@ -51,6 +51,20 @@
 
     &:active:after {
       width: 36px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__label {
+      width: 77px;
+      height: 32px;
+
+      &:after {
+        top: 5px;
+        width: 36px;
+        height: 23px;
+        
+      }
     }
   }
 }

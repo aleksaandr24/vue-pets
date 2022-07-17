@@ -6,7 +6,7 @@
       :for="inputId">
       {{ floatLabel }}
     </label>
-    <slot></slot>
+    <slot/>
   </div>
 </template>
 

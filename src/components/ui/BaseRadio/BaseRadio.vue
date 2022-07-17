@@ -12,7 +12,7 @@
     class="base-radio-label"
     :for="elemValue"
   >
-    <slot></slot>
+    <slot/>
   </label>
 </template>
 

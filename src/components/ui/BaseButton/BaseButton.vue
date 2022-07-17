@@ -2,6 +2,7 @@
   <button
     :class="buttonClassName"
     :disabled="loading"
+    type="button"
   >
     <div
       v-if="loading"

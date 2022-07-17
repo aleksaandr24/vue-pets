@@ -6,4 +6,12 @@
     'sidebar main';
   grid-template-columns: 100px 1fr;
   grid-template-rows: 156px 1fr;
+
+  @media screen and (max-width: 1279px) {
+    grid-template-areas: 
+    'sidebar header'
+    'main main';
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 136px 1fr;
+  }
 }

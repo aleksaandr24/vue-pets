@@ -392,11 +392,9 @@ export default {
     }
   },
 
-  created() {
-    this.$emit('pageTitle', this.title)
-  },
-
   mounted() {
+    this.$parent.$parent.$emit('pageTitle', this.title)
+    
     document.body.classList.add('loading')
     setTimeout(() => {
       this.loading = false
