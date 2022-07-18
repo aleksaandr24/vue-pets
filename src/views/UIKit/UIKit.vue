@@ -159,7 +159,7 @@
           <BaseButton
             :elemClass="'ui-kit__button'"
           >
-            Обычная кнопка
+            Кнопка
           </BaseButton>
           <BaseButton
             :elemClass="'ui-kit__button'"
@@ -171,24 +171,7 @@
             :loading="true"
             :elemClass="'ui-kit__button'"
           >
-            Обычная кнопка
-          </BaseButton>
-          <BaseButton
-            :elemClass="'ui-kit__button_small'"
-          >
-            Маленькая
-          </BaseButton>
-          <BaseButton
-            :elemClass="'ui-kit__button_small'"
-            :disabled="true"
-          >
-            Заблокирована
-          </BaseButton>
-          <BaseButton 
-            :loading="true"
-            :elemClass="'ui-kit__button_small'"
-          >
-            Маленькая
+            Кнопка
           </BaseButton>
         </div>
       </BaseCard>

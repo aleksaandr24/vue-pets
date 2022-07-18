@@ -2,7 +2,9 @@
   display: none;
 
   &:checked + .base-radio-label:before {
-    background: url('@/assets/images/radio-checked.svg') no-repeat center center;
+    background-image: url('@/assets/images/radio-checked.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 

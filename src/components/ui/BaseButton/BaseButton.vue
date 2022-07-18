@@ -1,7 +1,7 @@
 <template>
   <button
     :class="buttonClassName"
-    :disabled="loading"
+    :disabled="disabled || loading"
     type="button"
   >
     <div
