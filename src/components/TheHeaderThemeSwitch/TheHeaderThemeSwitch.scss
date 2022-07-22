@@ -2,9 +2,9 @@
 	@include flex-direct-vh(row);
 
   &__input {
+    visibility: hidden;
     height: 0;
     width: 0;
-    visibility: hidden;
 
     &:checked + .theme-switch__label {
       background-color: var(--color-solid-white);
@@ -21,18 +21,18 @@
   }
 
   &__label {
-    margin-right: 10px;
-    cursor: pointer;
-    text-indent: -9999px;
+    display: block;
+    position: relative;
     width: 110px;
     height: 46px;
+    margin-right: 10px;
+    border-radius: 20px;
     background-color: var(--bg-color-secondary);
     background-image: url('@/assets/images/sun-dark.svg');
     background-repeat: no-repeat;
     background-position: 85%;
-    display: block;
-    border-radius: 20px;
-    position: relative;
+    text-indent: -9999px;
+    cursor: pointer;
     
     &:after {
       content: '';
@@ -46,11 +46,7 @@
       background-repeat: no-repeat;
       background-position: center center;
       border-radius: 16px;
-      transition: 0.1s ease-in-out;
-    }
-
-    &:active:after {
-      width: 36px;
+      transition: 0.4s ease-in-out;
     }
   }
 

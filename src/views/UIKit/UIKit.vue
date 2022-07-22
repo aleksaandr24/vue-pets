@@ -53,14 +53,14 @@
         <div class="ui-kit__selects">
           <BaseSelect
             v-model="baseSelect1"
-            :elemData="selectData"
+            :elemData="selectData1"
             :dark="darkTheme"
           >
             Выберите пункты
           </BaseSelect>
             <BaseSelect
             v-model="baseSelect2"
-            :elemData="selectData"
+            :elemData="selectData2"
             :dark="darkTheme"
             danger
           >
@@ -340,7 +340,17 @@ export default {
       baseInput3: '',
       baseSelect1: '',
       baseSelect2: '',
-      selectData: [
+      selectData1: [
+        {name: 'Пункт первый', disabled: false},
+        {name: 'Пункт второй', disabled: true},
+        {name: 'Пункт третий', disabled: false},
+        {name: 'Пункт четвертый', disabled: false},
+        {name: 'Пункт пятый', disabled: false},
+        {name: 'Пункт шестой', disabled: false},
+        {name: 'Пункт седьмой', disabled: false},
+        {name: 'Пункт восьмой', disabled: false},
+      ],
+      selectData2: [
         {name: 'Пункт первый', disabled: false},
         {name: 'Пункт второй', disabled: true},
         {name: 'Пункт третий', disabled: false},
